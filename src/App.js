@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Intro from "./components/Intro";
+import About from "./components/About";
+import Project from "./components/Project";
+import Experience from "./components/Experience";
+import Education from "./components/Education";
+
+// todo: change <a> tag to Link from react-router-dom
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Intro />
+      <About />
+      <Project />
+      <Experience />
+      <Education />
     </div>
   );
 }
