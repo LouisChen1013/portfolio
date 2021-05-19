@@ -46,7 +46,7 @@ const About = () => {
             <h4>Top Expertise</h4>
             <p>
               Fullstack developer with variety programming skills: <br />
-              <a target="_blank" href="files/resume.pdf">
+              <a target="_blank" href="files/Louis_Chen.pdf">
                 Download Resume
               </a>
             </p>
