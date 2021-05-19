@@ -96,7 +96,7 @@ const Project4 = () => {
                     <img
                       src={
                         process.env.PUBLIC_URL +
-                        "/images/foodoor/foodoor_sign_up.png"
+                        "/images/foodoor/foodoor_sign_up.jpg"
                       }
                       alt="sign_up"
                     />
@@ -105,7 +105,7 @@ const Project4 = () => {
                     <img
                       src={
                         process.env.PUBLIC_URL +
-                        "/images/foodoor/foodoor_sign_in.png"
+                        "/images/foodoor/foodoor_sign_in.jpg"
                       }
                       alt="app_interface"
                     />
@@ -120,7 +120,7 @@ const Project4 = () => {
                     <img
                       src={
                         process.env.PUBLIC_URL +
-                        "/images/foodoor/foodoor_restaurants.png"
+                        "/images/foodoor/foodoor_restaurants.jpg"
                       }
                       alt="restaurants"
                     />
@@ -129,7 +129,7 @@ const Project4 = () => {
                     <img
                       src={
                         process.env.PUBLIC_URL +
-                        "/images/foodoor/foodoor_food.png"
+                        "/images/foodoor/foodoor_food.jpg"
                       }
                       alt="food"
                     />
@@ -144,7 +144,7 @@ const Project4 = () => {
                     <img
                       src={
                         process.env.PUBLIC_URL +
-                        "/images/foodoor/foodoor_search.png"
+                        "/images/foodoor/foodoor_search.jpg"
                       }
                       alt="search"
                     />
@@ -153,7 +153,7 @@ const Project4 = () => {
                     <img
                       src={
                         process.env.PUBLIC_URL +
-                        "/images/foodoor/foodoor_sort.png"
+                        "/images/foodoor/foodoor_sort.jpg"
                       }
                       alt="sort"
                     />
@@ -165,7 +165,7 @@ const Project4 = () => {
                     <img
                       src={
                         process.env.PUBLIC_URL +
-                        "/images/foodoor/foodoor_checkout.png"
+                        "/images/foodoor/foodoor_checkout.jpg"
                       }
                       alt="search"
                     />
@@ -174,7 +174,7 @@ const Project4 = () => {
                     <img
                       src={
                         process.env.PUBLIC_URL +
-                        "/images/foodoor/foodoor_email.png"
+                        "/images/foodoor/foodoor_email.jpg"
                       }
                       alt="sort"
                     />
@@ -186,7 +186,7 @@ const Project4 = () => {
                     <img
                       src={
                         process.env.PUBLIC_URL +
-                        "/images/foodoor/foodoor_profile.png"
+                        "/images/foodoor/foodoor_profile.jpg"
                       }
                       alt="search"
                       style={{ width: "40%" }}
