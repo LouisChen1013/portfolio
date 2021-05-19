@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { GrMysql } from "react-icons/gr";
-import { Button } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 
 const About = () => {
   const [name, setName] = useState("");
@@ -26,6 +26,7 @@ const About = () => {
     setEmail("");
     setMessage("");
   };
+
   return (
     <section className="s2">
       <div className="main-container">
@@ -59,7 +60,7 @@ const About = () => {
                   <IoLogoJavascript size={32} /> JavaScript
                 </li>
                 <li>
-                  <FaNodeJs size={32} /> NodeJS
+                  <FaNodeJs size={32} /> Node.js
                 </li>
 
                 <li>
@@ -87,59 +88,64 @@ const About = () => {
 
           <div className="contact">
             <h4 style={{ textAlign: "center" }}>Contact</h4>
-            <form id="contact-form" onSubmit={submitHandler}>
-              <label>Name</label>
-              <input
-                required
-                className="input-field"
-                type="text"
-                name="name"
-                placeholder="Enter Name"
-                value={name}
-                onChange={(e) => {
-                  setName(e.target.value);
-                }}
-              />
-              <label>Subject</label>
-              <input
-                required
-                className="input-field"
-                type="text"
-                name="subject"
-                placeholder="Enter Subject"
-                value={subject}
-                onChange={(e) => {
-                  setSubject(e.target.value);
-                }}
-              />
-              <label>Email</label>
-              <input
-                required
-                className="input-field"
-                type="text"
-                name="email"
-                placeholder="Enter Email"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-              />
-              <label>Message</label>
-              <textarea
-                required
-                className="input-field"
-                rows="6"
-                name="message"
-                placeholder="Enter Message"
-                value={message}
-                onChange={(e) => {
-                  setMessage(e.target.value);
-                }}
-              ></textarea>
+            <Form id="contact-form" onSubmit={submitHandler}>
+              <Form.Group md="4" controlId="validationName">
+                <Form.Label>Name</Form.Label>
+                <Form.Control
+                  required
+                  size="sm"
+                  type="text"
+                  placeholder="Enter Name"
+                  value={name}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                />
+              </Form.Group>
+              <Form.Group md="4" controlId="validationSubject">
+                <Form.Label>Subject</Form.Label>
+                <Form.Control
+                  required
+                  size="sm"
+                  type="text"
+                  placeholder="Enter Subject"
+                  value={subject}
+                  onChange={(e) => {
+                    setSubject(e.target.value);
+                  }}
+                />
+              </Form.Group>
+              <Form.Group md="4" controlId="validationEmail">
+                <Form.Label>Email</Form.Label>
+                <Form.Control
+                  required
+                  size="sm"
+                  type="email"
+                  placeholder="Enter Email"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                />
+              </Form.Group>
+              <Form.Group controlId="MessageForm.ControlTextarea">
+                <Form.Label>Message</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  size="sm"
+                  rows={6}
+                  placeholder="Enter Message"
+                  required
+                  value={message}
+                  onChange={(e) => {
+                    setMessage(e.target.value);
+                  }}
+                />
+              </Form.Group>
               <Button className="btn-color submit-btn" type="submit">
                 Send
               </Button>
-            </form>
+            </Form>
           </div>
         </div>
       </div>
