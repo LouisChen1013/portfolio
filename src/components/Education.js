@@ -11,13 +11,13 @@ const Education = () => {
           <h6>British Columbia Institute of Technology</h6>
           <h6>DECEMBER 2020</h6>
           <ul>
-            <li>Graduated with distinction with 87% GPA</li>
+            <li>Graduated with distinction 87% GPA</li>
             <li>
               Completed coursework in web development, data analysis, and system
               administration
             </li>
             <li>
-              Ensured code meets the professional standard and requirement by
+              Ensured code meets the professional standards and requirements by
               implementing unit testing methods
             </li>
             <li>

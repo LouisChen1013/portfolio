@@ -5,8 +5,6 @@ import Project from "./components/Project";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
 
-// todo: change <a> tag to Link from react-router-dom
-
 function App() {
   return (
     <div>
