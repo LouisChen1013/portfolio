@@ -49,14 +49,14 @@ const About = () => {
               <a
                 className="mr-2"
                 target="_blank"
-                href="/files/Louis_Chen.pdf"
+                href="files/Louis_Chen.pdf"
                 rel="noopener noreferrer"
               >
                 Download Resume
               </a>
               <a
                 target="_blank"
-                href="/files/Louis_Chen_C.pdf"
+                href="files/Louis_Chen_C.pdf"
                 rel="noopener noreferrer"
               >
                 下載履歷
