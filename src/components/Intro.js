@@ -192,11 +192,14 @@ const Intro = () => {
                     typewriter
                       .typeString("I am a developer 💻")
                       .pauseFor(1500)
-                      .deleteAll()
-                      .typeString("I am a system administrator ⚙️")
+                      .deleteChars(11)
+                      .typeString("system administrator ⚙️")
                       .pauseFor(1500)
-                      .deleteAll()
-                      .typeString("I am a badminton lover 🏸")
+                      .deleteChars(22)
+                      .typeString("badminton lover 🏸")
+                      .pauseFor(1500)
+                      .deleteChars(19)
+                      .typeString("also a hiker 🥾")
                       .pauseFor(1500)
                       .start();
                   }}

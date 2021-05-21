@@ -46,8 +46,20 @@ const About = () => {
             <h4>Top Expertise</h4>
             <p>
               Fullstack developer with variety programming skills: <br />
-              <a target="_blank" href="files/Louis_Chen.pdf">
+              <a
+                className="mr-2"
+                target="_blank"
+                href="/files/Louis_Chen.pdf"
+                rel="noopener noreferrer"
+              >
                 Download Resume
+              </a>
+              <a
+                target="_blank"
+                href="/files/Louis_Chen_C.pdf"
+                rel="noopener noreferrer"
+              >
+                下載履歷
               </a>
             </p>
 

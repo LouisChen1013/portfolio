@@ -25,6 +25,10 @@ const Experience = () => {
               Worked directly with the clients to implement features and
               understand use cases
             </li>
+            <li>
+              Applied Agile development to gather user​ feedback and respond
+              constructively
+            </li>
           </ul>
         </div>
       </div>
