@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { FaGithub } from "react-icons/fa";
+import { CgScreen } from "react-icons/cg";
 
 const Project5 = () => {
   const [show, setShow] = useState(false);
@@ -30,6 +31,13 @@ const Project5 = () => {
             rel="noopener noreferrer"
           >
             <FaGithub className="ml-4 github-icon" size={39} />
+          </a>
+          <a
+            href="https://demoshop-c.herokuapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CgScreen className="ml-4 github-icon" size={39} />
           </a>
         </div>
         <Modal

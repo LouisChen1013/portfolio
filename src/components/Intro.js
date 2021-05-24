@@ -136,7 +136,7 @@ const Intro = () => {
           <div className="left-column">
             <img
               id="profile_pic"
-              src={process.env.PUBLIC_URL + "/images/self.jpg"}
+              src={process.env.PUBLIC_URL + "/images/self2.jpg"}
               alt="selfie"
             />
             <h5 style={{ textAlign: "center", lineHeight: 0 }}>
