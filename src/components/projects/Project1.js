@@ -92,12 +92,12 @@ const Project1 = () => {
                   <li>Git/Github</li>
                 </ul>
                 <h5>Demo Video</h5>
-                <div class="embed-responsive embed-responsive-16by9">
+                <div className="embed-responsive embed-responsive-16by9">
                   <iframe
                     title="ISSP Demo"
-                    class="embed-responsive-item"
+                    className="embed-responsive-item"
                     src="https://www.youtube.com/embed/UutQcFizdLk"
-                    allowFullScreen="true"
+                    allowFullScreen={true}
                   ></iframe>
                 </div>
                 <h5>Submission Form</h5>
