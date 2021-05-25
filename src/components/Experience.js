@@ -9,26 +9,23 @@ const Experience = () => {
           <h6>SEPTEMBER 2020 - DECEMBER 2020</h6>
           <ul>
             <li>
-              Developed a management dashboard that allowed faculty
+              Developed a management dashboard (CMS) that allowed faculty
               members/instructors to monitor and manage ISSP projects
             </li>
             <li>
-              Collaborated closely with other team members to implement
-              solutions that are aligned with industry standards and client
-              expectations
+              Collaborated closely with other team members to analyze feature
+              requirements, strategize implementation solutions, and deliver a
+              written program based on ​clients' specifications
             </li>
             <li>
-              Researched and conceptualized a paper-and-pen based system to a
-              web platform
+              Researched and transformed clients'​ ideas and vision into ​a
+              fully functional MVP
             </li>
             <li>
-              Worked directly with the clients to implement features and
-              understand use cases
-            </li>
-            <li>
-              Applied Agile development to gather user​ feedback and respond
+              Applied Agile development to gather user feedback and respond
               constructively
             </li>
+            <li>Significantly reduced workload and working hours of staff</li>
           </ul>
         </div>
       </div>
