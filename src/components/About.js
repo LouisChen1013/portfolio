@@ -44,16 +44,19 @@ const About = () => {
             </p>
             <hr />
             <h4>Top Expertise</h4>
-            <p>
-              Fullstack developer with variety programming skills: <br />
+            <p className="mb-2">
+              Fullstack developer with variety programming skills:
+            </p>
+            <div className="mb-2">
               <a
-                className="mr-2"
                 target="_blank"
                 href="files/Louis_Chen.pdf"
                 rel="noopener noreferrer"
               >
                 Download Resume
               </a>
+            </div>
+            <div className="mb-3">
               <a
                 target="_blank"
                 href="files/Louis_Chen_C.pdf"
@@ -61,7 +64,7 @@ const About = () => {
               >
                 下載履歷
               </a>
-            </p>
+            </div>
 
             <div id="skills">
               <ul className="no-list-style">
