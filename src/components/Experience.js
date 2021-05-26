@@ -25,7 +25,10 @@ const Experience = () => {
               Applied Agile development to gather user feedback and respond
               constructively
             </li>
-            <li>Significantly reduced workload and working hours of staff</li>
+            <li>
+              Successfully optimized employees' workflow efficiency and further
+              reduced the workload of our clients
+            </li>
           </ul>
         </div>
       </div>
