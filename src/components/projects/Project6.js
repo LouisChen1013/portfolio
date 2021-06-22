@@ -67,10 +67,9 @@ const Project5 = () => {
                 <h5>Objective:</h5>
                 <p>
                   Camp Biloigy is a web application that allows you to share
-                  your best camping sites around the world. Once you sign-up,
-                  you can begin to create your own campgrounds and comment on
-                  others campsites. Get started exploring our amazing
-                  campgrounds!
+                  your best campsites around the world. Once you sign-up, you
+                  can begin to create your own campgrounds and comment on others
+                  campsites. Get started exploring our amazing campgrounds!
                 </p>
                 <h5>Key Features: </h5>
                 <ul>
