@@ -1,9 +1,10 @@
-import Project1 from "./projects/Project1";
-import Project2 from "./projects/Project2";
-import Project3 from "./projects/Project3";
-import Project4 from "./projects/Project4";
-import Project5 from "./projects/Project5";
-import Project6 from "./projects/Project6";
+import BCIT from "./projects/BCIT";
+import Expense from "./projects/Expense";
+import Character from "./projects/Character";
+import Shop from "./projects/Shop";
+import Camp from "./projects/Camp";
+import Chat from "./projects/Chat";
+// import Foodoor from "./projects/Foodoor";
 
 const Project = () => {
   return (
@@ -11,12 +12,13 @@ const Project = () => {
       <div className="main-container">
         <h3 style={{ textAlign: "center" }}>Some of my past projects</h3>
         <div className="project-wrapper">
-          <Project1 />
-          <Project2 />
-          <Project3 />
-          <Project4 />
-          <Project5 />
-          <Project6 />
+          <BCIT />
+          <Camp />
+          <Chat />
+          <Expense />
+          <Character />
+          <Shop />
+          {/* <Foodoor /> */}
         </div>
       </div>
     </section>
