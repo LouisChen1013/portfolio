@@ -1,5 +1,5 @@
 # Portfolio
 
-Using react to build a personal portfolio
+Developed a personal portfolio using React
 
-View at https://louischen1013.github.io/portfolio/
+View at <https://louischen1013.github.io/portfolio/>
