@@ -7,9 +7,9 @@ import {
   FaGitAlt,
   FaReact,
   FaAws,
+  FaDatabase,
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
-import { GrMysql } from "react-icons/gr";
 import { Button, Form } from "react-bootstrap";
 
 const About = () => {
@@ -89,7 +89,7 @@ const About = () => {
                   <FaCss3Alt size={32} /> HTML/CSS
                 </li>
                 <li>
-                  <GrMysql size={32} /> MySQL
+                  <FaDatabase size={32} /> SQL/NoSQL
                 </li>
                 <li>
                   <FaGitAlt size={32} /> Git
