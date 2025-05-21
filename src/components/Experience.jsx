@@ -15,11 +15,11 @@ const Experience = () => {
             <li>
               Collaborated closely with other team members to analyze feature
               requirements, strategize implementation solutions, and deliver a
-              written program based on ​clients' specifications
+              written program based on clients' specifications
             </li>
             <li>
-              Researched and transformed clients'​ ideas and vision into ​a
-              fully functional MVP
+              Researched and transformed clients' ideas and vision into a fully
+              functional MVP
             </li>
             <li>
               Applied Agile development to gather user feedback and respond
