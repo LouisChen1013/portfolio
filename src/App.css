@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;1,500&family=Russo+One&display=swap");
+
 /* create variables with global scope */
 :root {
   --mainColor: #eaeaea;
@@ -35,7 +37,6 @@ h6,
 strong {
   color: var(--mainText);
   font-family: "Russo One", sans-serif;
-  font-weight: 500;
 }
 
 h1,
@@ -323,6 +324,7 @@ h6 {
 #skills {
   display: flex;
   justify-content: space-evenly;
+  border: 1px dashed blue;
   background-color: var(--previewShadow);
 }
 
