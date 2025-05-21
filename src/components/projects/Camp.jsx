@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { FaGithub } from "react-icons/fa";
+const BASE_URL = import.meta.env.BASE_URL;
 // import { CgScreen } from "react-icons/cg";
 
 const Camp = () => {
@@ -12,7 +13,7 @@ const Camp = () => {
     <div className="project">
       <img
         className="thumbnail"
-        src="/images/camp_biology/home.png"
+        src={`${BASE_URL}images/camp_biology/home.png`}
         alt="home"
       />
       <div className="project-preview">
@@ -104,29 +105,53 @@ const Camp = () => {
                 <br />
                 <h5>Home page & Main page</h5>
                 <div className="img-container">
-                  <img src="/images/camp_biology/home.png" alt="home_page" />
+                  <img
+                    src={`${BASE_URL}images/camp_biology/home.png`}
+                    alt="home_page"
+                  />
                 </div>
                 <div className="img-container">
-                  <img src="/images/camp_biology/main.png" alt="main_page" />
+                  <img
+                    src={`${BASE_URL}images/camp_biology/main.png`}
+                    alt="main_page"
+                  />
                 </div>
                 <h5>Register & Login Screen</h5>
                 <div className="img-container">
-                  <img src="/images/camp_biology/register.png" alt="register" />
-                  <img src="/images/camp_biology/login.png" alt="login" />
+                  <img
+                    src={`${BASE_URL}images/camp_biology/register.png`}
+                    alt="register"
+                  />
+                  <img
+                    src={`${BASE_URL}images/camp_biology/login.png`}
+                    alt="login"
+                  />
                 </div>
                 <h5>Campground add & edit & delete functionalities</h5>
                 <div className="img-container">
-                  <img src="/images/camp_biology/camp.png" alt="camp" />
+                  <img
+                    src={`${BASE_URL}images/camp_biology/camp.png`}
+                    alt="camp"
+                  />
                 </div>
                 <div className="img-container">
-                  <img src="/images/camp_biology/new.png" alt="new" />
+                  <img
+                    src={`${BASE_URL}images/camp_biology/new.png`}
+                    alt="new"
+                  />
                 </div>
                 <div className="img-container">
-                  <img src="/images/camp_biology/edit.png" alt="edit" />
+                  <img
+                    src={`${BASE_URL}images/camp_biology/edit.png`}
+                    alt="edit"
+                  />
                 </div>
                 <h5>Campground details and review page</h5>
                 <div className="img-container">
-                  <img src="/images/camp_biology/show.png" alt="show" />
+                  <img
+                    src={`${BASE_URL}images/camp_biology/show.png`}
+                    alt="show"
+                  />
                 </div>
               </div>
             </section>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { FaGithub } from "react-icons/fa";
+const BASE_URL = import.meta.env.BASE_URL;
 // import { CgScreen } from "react-icons/cg";
 
 const Chat = () => {
@@ -10,7 +11,11 @@ const Chat = () => {
   const handleShow = () => setShow(true);
   return (
     <div className="project">
-      <img className="thumbnail" src="/images/chatbox/main.png" alt="home" />
+      <img
+        className="thumbnail"
+        src={`${BASE_URL}images/chatbox/main.png`}
+        alt="home"
+      />
       <div className="project-preview">
         <div className="text-center">
           <h6 className="project-title mb-3">ChatBox</h6>
@@ -104,38 +109,50 @@ const Chat = () => {
                 <br />
                 <h5>Main page</h5>
                 <div className="img-container">
-                  <img src="/images/chatbox/main.png" alt="main_page" />
+                  <img
+                    src={`${BASE_URL}images/chatbox/main.png`}
+                    alt="main_page"
+                  />
                 </div>
                 <h5>Chat Room</h5>
                 <div className="img-container">
-                  <img src="/images/chatbox/chat_room.png" alt="chat_room" />
+                  <img
+                    src={`${BASE_URL}images/chatbox/chat_room.png`}
+                    alt="chat_room"
+                  />
                 </div>
                 <h5>User Join & Leave</h5>
                 <div className="img-container">
-                  <img src="/images/chatbox/join.png" alt="join" />
-                </div>
-                <div className="img-container">
-                  <img src="/images/chatbox/leave.png" alt="leave" />
-                </div>
-                <h5>Chat & Share Location</h5>
-                <div className="img-container">
-                  <img src="/images/chatbox/chat.png" alt="chat" />
+                  <img src={`${BASE_URL}images/chatbox/join.png`} alt="join" />
                 </div>
                 <div className="img-container">
                   <img
-                    src="/images/chatbox/share_location.png"
+                    src={`${BASE_URL}images/chatbox/leave.png`}
+                    alt="leave"
+                  />
+                </div>
+                <h5>Chat & Share Location</h5>
+                <div className="img-container">
+                  <img src={`${BASE_URL}images/chatbox/chat.png`} alt="chat" />
+                </div>
+                <div className="img-container">
+                  <img
+                    src={`${BASE_URL}images/chatbox/share_location.png`}
                     alt="share_location"
                   />
                 </div>
                 <h5>Leave and Error Popup</h5>
                 <div className="img-container">
                   <img
-                    src="/images/chatbox/leave_confirm.png"
+                    src={`${BASE_URL}images/chatbox/leave_confirm.png`}
                     alt="leave_confirm"
                   />
                 </div>
                 <div className="img-container">
-                  <img src="/images/chatbox/join_error.png" alt="join_error" />
+                  <img
+                    src={`${BASE_URL}images/chatbox/join_error.png`}
+                    alt="join_error"
+                  />
                 </div>
               </div>
             </section>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { FaGithub } from "react-icons/fa";
+const BASE_URL = import.meta.env.BASE_URL;
 
 const Foodoor = () => {
   const [show, setShow] = useState(false);
@@ -11,7 +12,7 @@ const Foodoor = () => {
     <div className="project">
       <img
         className="thumbnail"
-        src="/images/foodoor/foodoor_main.jpg"
+        src={`${BASE_URL}images/foodoor/foodoor_main.jpg`}
         alt="main"
       />
       <div className="project-preview">
@@ -94,13 +95,13 @@ const Foodoor = () => {
                 <div className="food-img-container">
                   <div>
                     <img
-                      src="/images/foodoor/foodoor_sign_up.jpg"
+                      src={`${BASE_URL}images/foodoor/foodoor_sign_up.jpg`}
                       alt="sign_up"
                     />
                   </div>
                   <div>
                     <img
-                      src="/images/foodoor/foodoor_sign_in.jpg"
+                      src={`${BASE_URL}images/foodoor/foodoor_sign_in.jpg`}
                       alt="app_interface"
                     />
                   </div>
@@ -112,12 +113,15 @@ const Foodoor = () => {
                 <div className="food-img-container">
                   <div>
                     <img
-                      src="/images/foodoor/foodoor_restaurants.jpg"
+                      src={`${BASE_URL}images/foodoor/foodoor_restaurants.jpg`}
                       alt="restaurants"
                     />
                   </div>
                   <div>
-                    <img src="/images/foodoor/foodoor_food.jpg" alt="food" />
+                    <img
+                      src={`${BASE_URL}images/foodoor/foodoor_food.jpg`}
+                      alt="food"
+                    />
                   </div>
                 </div>
                 <h5>
@@ -127,31 +131,37 @@ const Foodoor = () => {
                 <div className="food-img-container">
                   <div>
                     <img
-                      src="/images/foodoor/foodoor_search.jpg"
+                      src={`${BASE_URL}images/foodoor/foodoor_search.jpg`}
                       alt="search"
                     />
                   </div>
                   <div>
-                    <img src="/images/foodoor/foodoor_sort.jpg" alt="sort" />
+                    <img
+                      src={`${BASE_URL}images/foodoor/foodoor_sort.jpg`}
+                      alt="sort"
+                    />
                   </div>
                 </div>
                 <h5>Email confirmation upon completion of an order</h5>
                 <div className="food-img-container">
                   <div>
                     <img
-                      src="/images/foodoor/foodoor_checkout.jpg"
+                      src={`${BASE_URL}images/foodoor/foodoor_checkout.jpg`}
                       alt="search"
                     />
                   </div>
                   <div>
-                    <img src="/images/foodoor/foodoor_email.jpg" alt="sort" />
+                    <img
+                      src={`${BASE_URL}images/foodoor/foodoor_email.jpg`}
+                      alt="sort"
+                    />
                   </div>
                 </div>
                 <h5>User profile/Logout</h5>
                 <div className="food-img-container">
                   <div>
                     <img
-                      src="/images/foodoor/foodoor_profile.jpg"
+                      src={`${BASE_URL}images/foodoor/foodoor_profile.jpg`}
                       alt="search"
                       style={{ width: "40%" }}
                     />

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { FaGithub } from "react-icons/fa";
+const BASE_URL = import.meta.env.BASE_URL;
 // import { CgScreen } from "react-icons/cg";
 
 const Expense = () => {
@@ -12,7 +13,7 @@ const Expense = () => {
     <div className="project">
       <img
         className="thumbnail"
-        src="/images/expense_tracker/expense_tracker.png"
+        src={`${BASE_URL}images/expense_tracker/expense_tracker.png`}
         alt="dashboard"
       />
       <div className="project-preview">
@@ -107,28 +108,28 @@ const Expense = () => {
                 <h5>App Interface</h5>
                 <div className="img-container">
                   <img
-                    src="/images/expense_tracker/expense_tracker.png"
+                    src={`${BASE_URL}images/expense_tracker/expense_tracker.png`}
                     alt="app_interface"
                   />
                 </div>
                 <h5>Interface to add a transaction</h5>
                 <div className="img-container">
                   <img
-                    src="/images/expense_tracker/add_transaction.png"
+                    src={`${BASE_URL}images/expense_tracker/add_transaction.png`}
                     alt="add_transaction"
                   />
                 </div>
                 <h5>Interface to edit a transaction</h5>
                 <div className="img-container">
                   <img
-                    src="/images/expense_tracker/edit_transaction.png"
+                    src={`${BASE_URL}images/expense_tracker/edit_transaction.png`}
                     alt="add_transaction"
                   />
                 </div>
                 <h5>Interface to delete & review transactions</h5>
                 <div className="img-container">
                   <img
-                    src="/images/expense_tracker/delete_transaction.png"
+                    src={`${BASE_URL}images/expense_tracker/delete_transaction.png`}
                     alt="delete_review_transactions"
                   />
                 </div>

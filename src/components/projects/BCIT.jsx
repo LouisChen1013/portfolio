@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { FaGithub } from "react-icons/fa";
+const BASE_URL = import.meta.env.BASE_URL;
 
 const BCIT = () => {
   const [show, setShow] = useState(false);
@@ -11,7 +12,7 @@ const BCIT = () => {
     <div className="project">
       <img
         className="thumbnail"
-        src="/images/BCIT_SOCAS/dash.png"
+        src={`${BASE_URL}images/BCIT_SOCAS/dash.png`}
         alt="dashboard"
       />
       <div className="project-preview">
@@ -103,53 +104,65 @@ const BCIT = () => {
                 <h5>Submission Form</h5>
                 <div className="img-container">
                   <img
-                    src="/images/BCIT_SOCAS/submission.png"
+                    src={`${BASE_URL}images/BCIT_SOCAS/submission.png`}
                     alt="submission"
                   />
                 </div>
                 <h5>Login Screen for Management Portal</h5>
                 <div className="img-container">
                   <img
-                    src="/images/BCIT_SOCAS/login_page.png"
+                    src={`${BASE_URL}images/BCIT_SOCAS/login_page.png`}
                     alt="login_page"
                   />
                 </div>
                 <h5>Logged-in view</h5>
                 <div className="img-container">
-                  <img src="/images/BCIT_SOCAS/dash.png" alt="dashboard" />
+                  <img
+                    src={`${BASE_URL}images/BCIT_SOCAS/dash.png`}
+                    alt="dashboard"
+                  />
                 </div>
                 <h5>Sample Interface to leave feedback for each project</h5>
                 <div className="img-container">
-                  <img src="/images/BCIT_SOCAS/feedback.png" alt="feedback" />
+                  <img
+                    src={`${BASE_URL}images/BCIT_SOCAS/feedback.png`}
+                    alt="feedback"
+                  />
                 </div>
                 <h5>Interface to generate documents</h5>
                 <div className="img-container">
                   <img
-                    src="/images/BCIT_SOCAS/student_catalogue.png"
+                    src={`${BASE_URL}images/BCIT_SOCAS/student_catalogue.png`}
                     alt="student_catalogue"
                   />
                 </div>
                 <h5>Sample document extracted with dummy data</h5>
                 <div className="img-container">
                   <img
-                    src="/images/BCIT_SOCAS/document_generation.png"
+                    src={`${BASE_URL}images/BCIT_SOCAS/document_generation.png`}
                     alt="document_generation"
                   />
                 </div>
                 <h5>Interface to change Settings for incoming submissions</h5>
                 <div className="img-container">
-                  <img src="/images/BCIT_SOCAS/setting.png" alt="setting" />
+                  <img
+                    src={`${BASE_URL}images/BCIT_SOCAS/setting.png`}
+                    alt="setting"
+                  />
                 </div>
                 <h5>Interface to manage users</h5>
                 <div className="img-container">
                   <img
-                    src="/images/BCIT_SOCAS/user_management.png"
+                    src={`${BASE_URL}images/BCIT_SOCAS/user_management.png`}
                     alt="user_management"
                   />
                 </div>
                 <h5>Interface to add users</h5>
                 <div className="img-container">
-                  <img src="/images/BCIT_SOCAS/add_user.png" alt="add_user" />
+                  <img
+                    src={`${BASE_URL}images/BCIT_SOCAS/add_user.png`}
+                    alt="add_user"
+                  />
                 </div>
               </div>
             </section>

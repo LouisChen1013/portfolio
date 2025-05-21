@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { FaGithub } from "react-icons/fa";
+const BASE_URL = import.meta.env.BASE_URL;
 
 const Character = () => {
   const [show, setShow] = useState(false);
@@ -11,7 +12,7 @@ const Character = () => {
     <div className="project">
       <img
         className="thumbnail"
-        src="/images/character_management_system/character_management_system.png"
+        src={`${BASE_URL}images/character_management_system/character_management_system.png`}
         alt="dashboard"
       />
       <div className="project-preview">
@@ -80,57 +81,57 @@ const Character = () => {
                 <h5>UML</h5>
                 <div className="img-container">
                   <img
-                    src="/images/character_management_system/uml.png"
+                    src={`${BASE_URL}images/character_management_system/uml.png`}
                     alt="uml"
                   />
                 </div>
                 <h5>App Interface</h5>
                 <div className="img-container">
                   <img
-                    src="/images/character_management_system/character_management_system.png"
+                    src={`${BASE_URL}images/character_management_system/character_management_system.png`}
                     alt="app_interface"
                   />
                 </div>
                 <h5>Interface to add a player/monster</h5>
                 <div className="img-container">
                   <img
-                    src="/images/character_management_system/add_player.png"
+                    src={`${BASE_URL}images/character_management_system/add_player.png`}
                     alt="add_player"
                   />
                   <img
-                    src="/images/character_management_system/add_monster.png"
+                    src={`${BASE_URL}images/character_management_system/add_monster.png`}
                     alt="add_monster"
                   />
                 </div>
                 <h5>Interface to delete a character</h5>
                 <div className="img-container">
                   <img
-                    src="/images/character_management_system/delete_character.png"
+                    src={`${BASE_URL}images/character_management_system/delete_character.png`}
                     alt="delete_character"
                   />
                 </div>
                 <h5>Interface to update a character</h5>
                 <div className="img-container">
                   <img
-                    src="/images/character_management_system/update_character.png"
+                    src={`${BASE_URL}images/character_management_system/update_character.png`}
                     alt="update_character"
                   />
                 </div>
                 <h5>Interface to toggle a player or monster</h5>
                 <div className="img-container">
                   <img
-                    src="/images/character_management_system/show_player.png"
+                    src={`${BASE_URL}images/character_management_system/show_player.png`}
                     alt="show_player"
                   />
                   <img
-                    src="/images/character_management_system/show_monster.png"
+                    src={`${BASE_URL}images/character_management_system/show_monster.png`}
                     alt="show_monster"
                   />
                 </div>
                 <h5>Interface to display a character detail</h5>
                 <div className="img-container">
                   <img
-                    src="/images/character_management_system/show_detail.png"
+                    src={`${BASE_URL}images/character_management_system/show_detail.png`}
                     alt="show_detail"
                   />
                 </div>

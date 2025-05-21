@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Typewriter from "typewriter-effect";
 import GraphemeSplitter from "grapheme-splitter";
+const BASE_URL = import.meta.env.BASE_URL;
 
 const Intro = () => {
   const lightTheme = {
@@ -118,7 +119,11 @@ const Intro = () => {
             </ul>
           </div>
           <div className="left-column">
-            <img id="profile_pic" src="/images/self2.jpg" alt="selfie" />
+            <img
+              id="profile_pic"
+              src={`${BASE_URL}images/self2.jpg`}
+              alt="selfie"
+            />
             <h5 style={{ textAlign: "center", lineHeight: 0 }}>
               Personalize Theme
             </h5>

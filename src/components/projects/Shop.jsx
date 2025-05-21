@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { FaGithub } from "react-icons/fa";
+const BASE_URL = import.meta.env.BASE_URL;
 // import { CgScreen } from "react-icons/cg";
 
 const Shop = () => {
@@ -12,7 +13,7 @@ const Shop = () => {
     <div className="project">
       <img
         className="thumbnail"
-        src="/images/ecommerce/ecom_main.png"
+        src={`${BASE_URL}images/ecommerce/ecom_main.png`}
         alt="dashboard"
       />
       <div className="project-preview">
@@ -116,92 +117,125 @@ const Shop = () => {
                 </i>
                 <h5>UML</h5>
                 <div className="img-container">
-                  <img src="/images/ecommerce/uml.png" alt="uml" />
+                  <img src={`${BASE_URL}images/ecommerce/uml.png`} alt="uml" />
                 </div>
                 <h5>Home page & Product search functionality</h5>
                 <div className="img-container">
-                  <img src="/images/ecommerce/ecom_main.png" alt="home_page" />
+                  <img
+                    src={`${BASE_URL}images/ecommerce/ecom_main.png`}
+                    alt="home_page"
+                  />
                 </div>
                 <div className="img-container">
-                  <img src="/images/ecommerce/ecom_search.png" alt="search" />
+                  <img
+                    src={`${BASE_URL}images/ecommerce/ecom_search.png`}
+                    alt="search"
+                  />
                 </div>
                 <h5>Sign Up & Sign In Screen</h5>
                 <div className="img-container">
-                  <img src="/images/ecommerce/ecom_sign_up.png" alt="sign_up" />
-                  <img src="/images/ecommerce/ecom_sign_in.png" alt="sign_in" />
+                  <img
+                    src={`${BASE_URL}images/ecommerce/ecom_sign_up.png`}
+                    alt="sign_up"
+                  />
+                  <img
+                    src={`${BASE_URL}images/ecommerce/ecom_sign_in.png`}
+                    alt="sign_in"
+                  />
                 </div>
                 <h5>Product page & reviews & ratings</h5>
                 <div className="img-container">
-                  <img src="/images/ecommerce/ecom_product.png" alt="product" />
+                  <img
+                    src={`${BASE_URL}images/ecommerce/ecom_product.png`}
+                    alt="product"
+                  />
                 </div>
                 <div className="img-container">
-                  <img src="/images/ecommerce/ecom_review.png" alt="review" />
+                  <img
+                    src={`${BASE_URL}images/ecommerce/ecom_review.png`}
+                    alt="review"
+                  />
                 </div>
                 <h5>Checkout Process</h5>
                 <div className="img-container">
                   <img
-                    src="/images/ecommerce/ecom_shopping_cart.png"
+                    src={`${BASE_URL}images/ecommerce/ecom_shopping_cart.png`}
                     alt="shopping_cart"
                   />
                 </div>
                 <div className="img-container">
                   <img
-                    src="/images/ecommerce/ecom_shipping.png"
+                    src={`${BASE_URL}images/ecommerce/ecom_shipping.png`}
                     alt="shipping"
                   />
                 </div>
                 <div className="img-container">
-                  <img src="/images/ecommerce/ecom_payment.png" alt="payment" />
+                  <img
+                    src={`${BASE_URL}images/ecommerce/ecom_payment.png`}
+                    alt="payment"
+                  />
                 </div>
                 <div className="img-container">
                   <img
-                    src="/images/ecommerce/ecom_place_order.png"
+                    src={`${BASE_URL}images/ecommerce/ecom_place_order.png`}
                     alt="place_order"
                   />
                 </div>
                 <div className="img-container">
-                  <img src="/images/ecommerce/ecom_paypal.png" alt="paypal" />
+                  <img
+                    src={`${BASE_URL}images/ecommerce/ecom_paypal.png`}
+                    alt="paypal"
+                  />
                 </div>
                 <h5>User profile with orders</h5>
                 <div className="img-container">
-                  <img src="/images/ecommerce/ecom_profile.png" alt="profile" />
+                  <img
+                    src={`${BASE_URL}images/ecommerce/ecom_profile.png`}
+                    alt="profile"
+                  />
                 </div>
                 <h5>Mark orders as delivered option</h5>
                 <div className="img-container">
                   <img
-                    src="/images/ecommerce/ecom_mark_deliver.png"
+                    src={`${BASE_URL}images/ecommerce/ecom_mark_deliver.png`}
                     alt="mark_deliver_complete"
                   />
                 </div>
                 <div className="img-container">
                   <img
-                    src="/images/ecommerce/ecom_mark_deliver_complete.png"
+                    src={`${BASE_URL}images/ecommerce/ecom_mark_deliver_complete.png`}
                     alt="mark_deliver_complete"
                   />
                 </div>
                 <h5>Admin product & User management I</h5>
                 <div className="img-container">
                   <img
-                    src="/images/ecommerce/ecom_products.png"
+                    src={`${BASE_URL}images/ecommerce/ecom_products.png`}
                     alt="products"
                   />
                 </div>
                 <div className="img-container">
-                  <img src="/images/ecommerce/ecom_users.png" alt="users" />
+                  <img
+                    src={`${BASE_URL}images/ecommerce/ecom_users.png`}
+                    alt="users"
+                  />
                 </div>
                 <div className="img-container">
-                  <img src="/images/ecommerce/ecom_orders.png" alt="orders" />
+                  <img
+                    src={`${BASE_URL}images/ecommerce/ecom_orders.png`}
+                    alt="orders"
+                  />
                 </div>
                 <h5>Admin product & User management II</h5>
                 <div className="img-container">
                   <img
-                    src="/images/ecommerce/ecom_edit_product.png"
+                    src={`${BASE_URL}images/ecommerce/ecom_edit_product.png`}
                     alt="edit_products"
                   />
                 </div>
                 <div className="img-container">
                   <img
-                    src="/images/ecommerce/ecom_edit_user.png"
+                    src={`${BASE_URL}images/ecommerce/ecom_edit_user.png`}
                     alt="edit_users"
                   />
                 </div>
