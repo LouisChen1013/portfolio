@@ -90,15 +90,8 @@ const Chat = () => {
                   <li>Heroku</li>
                   <li>Git/Github</li>
                 </ul>
-                <a
-                  href="https://lou-chatbox-app.herokuapp.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live Demo
-                </a>
                 <h5>Demo Video</h5>
-                <div className="embed-responsive embed-responsive-16by9">
+                <div className="ratio ratio-16x9">
                   <iframe
                     title="ChatBox Demo"
                     className="embed-responsive-item"

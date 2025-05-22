@@ -266,6 +266,10 @@ h6 {
   /* border: 1px dashed lightcoral; */
 }
 
+.main-context {
+  padding: 0 20px;
+}
+
 #preview-shadow {
   background-color: var(--previewShadow);
   width: 360px;
@@ -324,7 +328,7 @@ h6 {
 #skills {
   display: flex;
   justify-content: space-evenly;
-  border: 1px dashed blue;
+  /* border: 1px dashed blue; */
   background-color: var(--previewShadow);
 }
 
@@ -382,10 +386,23 @@ h6 {
 
 .img-container {
   max-width: 600px;
+  margin: 20px auto;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.img-container:hover {
+  transform: scale(1.03);
 }
 
 .img-container img {
-  padding: 10px 0 10px 0;
+  margin-bottom: 12px;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
 
 .food-img-container {
@@ -406,8 +423,16 @@ img {
   margin-top: 5px;
 }
 
+.work li {
+  margin-top: 3px;
+}
+
 .education h6 {
   margin-top: 5px;
+}
+
+.education li {
+  margin-top: 3px;
 }
 
 .my-modal .close span {

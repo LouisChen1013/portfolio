@@ -1,6 +1,6 @@
 const Education = () => {
   return (
-    <section className="s1">
+    <section className="s2">
       <div className="main-container">
         <h3 style={{ textAlign: "center" }}>Education</h3>
         <div className="education">

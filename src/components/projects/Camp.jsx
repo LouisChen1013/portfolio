@@ -95,13 +95,6 @@ const Camp = () => {
                   <li>Heroku</li>
                   <li>Git/Github</li>
                 </ul>
-                <a
-                  href="https://camp-biology.herokuapp.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live Demo
-                </a>
                 <br />
                 <h5>Home page & Main page</h5>
                 <div className="img-container">

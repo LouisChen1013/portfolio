@@ -101,13 +101,6 @@ const Shop = () => {
                   <li>AWS</li>
                   <li>Git/Github</li>
                 </ul>
-                <a
-                  href="https://demoshop-c.herokuapp.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live Demo
-                </a>
                 <br />
                 <i>
                   <b>

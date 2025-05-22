@@ -1,202 +1,128 @@
-import { useEffect } from "react";
+import { useState, useCallback } from "react";
 import Typewriter from "typewriter-effect";
 import GraphemeSplitter from "grapheme-splitter";
+import ThemeProvider from "../themes/ThemeProvider";
 const BASE_URL = import.meta.env.BASE_URL;
 
 const Intro = () => {
-  const lightTheme = {
-    "--mainColor": "#eaeaea",
-    "--secondaryColor": "#fff",
-    "--borderColor": "#c1c1c1",
-    "--mainText": "black",
-    "--secondaryText": "#4b5156",
-    "--themeDotBorder": "#24292e",
-    "--previewBg": "rgb(251, 249, 243, 0.8)",
-    "--previewShadow": "#f0ead6",
-    "--buttonColor": "black",
-  };
+  // Initialize theme from localStorage or default to 'light'
+  const [currentTheme, setCurrentTheme] = useState(() => {
+    return localStorage.getItem("theme") || "light";
+  });
 
-  const blueTheme = {
-    "--mainColor": "#15202b",
-    "--secondaryColor": "#192734",
-    "--borderColor": "#164d56",
-    "--mainText": "#fff",
-    "--secondaryText": "#eeeeee",
-    "--themeDotBorder": "#fff",
-    "--previewBg": "rgb(25, 39, 52, 0.8)",
-    "--previewShadow": "#111921",
-    "--buttonColor": "#17a2b8",
-  };
-
-  const greenTheme = {
-    "--mainColor": "#606b56",
-    "--secondaryColor": "#515a48",
-    "--borderColor": "#164d56",
-    "--mainText": "#fff",
-    "--secondaryText": "hsl(0, 0%, 93%)",
-    "--themeDotBorder": "#fff",
-    "--previewBg": "rgb(81, 90, 72, 0.8)",
-    "--previewShadow": "#2a2f25",
-    "--buttonColor": "#669966",
-  };
-
-  const purpleTheme = {
-    "--mainColor": "#46344E",
-    "--secondaryColor": "#382a3f",
-    "--borderColor": "#1d1520",
-    "--mainText": "#fff",
-    "--secondaryText": "#eeeeee",
-    "--themeDotBorder": "#fff",
-    "--previewBg": "rgb(29, 21, 32, 0.8)",
-    "--previewShadow": "#2b202f",
-    "--buttonColor": "#8534a3",
-  };
-
-  const stringSplitter = (string) =>
-    new GraphemeSplitter().splitGraphemes(string);
-
-  const setTheme = (mode) => {
-    const themeMap = {
-      light: lightTheme,
-      blue: blueTheme,
-      green: greenTheme,
-      purple: purpleTheme,
-    };
-    const theme = themeMap[mode] || lightTheme;
-    Object.entries(theme).forEach(([key, value]) => {
-      document.documentElement.style.setProperty(key, value);
-    });
+  const changeTheme = useCallback((mode) => {
+    setCurrentTheme(mode);
     localStorage.setItem("theme", mode);
-  };
-
-  const getTheme = () => {
-    const savedTheme = localStorage.getItem("theme");
-    setTheme(savedTheme || "light");
-  };
-
-  useEffect(() => {
-    getTheme();
   }, []);
 
-  const onClick = (e) => {
-    const mode = e.target.dataset.mode;
-    setTheme(mode);
-  };
+  const stringSplitter = useCallback((string) => {
+    return new GraphemeSplitter().splitGraphemes(string);
+  }, []);
 
   return (
-    <section className="s1">
-      <div className="main-container">
-        <div className="greeting-wrapper">
-          <h1>Hi, I'm Louis Chen</h1>
-        </div>
-        <div className="intro-wrapper">
-          <div className="nav-wrapper">
-            <div className="dots-wrapper">
-              <div id="dot-1" className="browser-dot"></div>
-              <div id="dot-2" className="browser-dot"></div>
-              <div id="dot-3" className="browser-dot"></div>
-            </div>
-
-            <ul id="navigation">
-              <li>
-                <a
-                  href="https://github.com/LouisChen1013"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Github
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/louis-chen-320816202/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Linkedin
-                </a>
-              </li>
-            </ul>
+    <ThemeProvider theme={currentTheme}>
+      <section className="s1">
+        <div className="main-container">
+          <div className="greeting-wrapper">
+            <h1>Hi, I'm Louis Chen</h1>
           </div>
-          <div className="left-column">
-            <img
-              id="profile_pic"
-              src={`${BASE_URL}images/self2.jpg`}
-              alt="selfie"
-            />
-            <h5 style={{ textAlign: "center", lineHeight: 0 }}>
-              Personalize Theme
-            </h5>
+          <div className="intro-wrapper">
+            <div className="nav-wrapper">
+              <div className="dots-wrapper">
+                <div id="dot-1" className="browser-dot"></div>
+                <div id="dot-2" className="browser-dot"></div>
+                <div id="dot-3" className="browser-dot"></div>
+              </div>
 
-            <div id="theme-options-wrapper">
-              <button
-                onClick={onClick}
-                data-mode="light"
-                id="light-mode"
-                className="theme-dot"
-              ></button>
-              <button
-                onClick={onClick}
-                data-mode="blue"
-                id="blue-mode"
-                className="theme-dot"
-              ></button>
-              <button
-                onClick={onClick}
-                data-mode="green"
-                id="green-mode"
-                className="theme-dot"
-              ></button>
-              <button
-                onClick={onClick}
-                data-mode="purple"
-                id="purple-mode"
-                className="theme-dot"
-              ></button>
+              <ul id="navigation">
+                <li>
+                  <a
+                    href="https://github.com/LouisChen1013"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Github
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/louis-chen-320816202/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Linkedin
+                  </a>
+                </li>
+              </ul>
             </div>
-            <p id="settings-note">
-              *Theme settings will be saved for <br />
-              your next vist
-            </p>
-          </div>
-          <div className="right-column">
-            <div id="preview-shadow">
-              <div id="preview">
-                <div id="corner-tl" className="corner"></div>
-                <div id="corner-tr" className="corner"></div>
-                <h3 style={{ marginBottom: "20px" }}>Who Am I</h3>
-                <Typewriter
-                  options={{
-                    wrapperClassName: "writer",
-                    loop: true,
-                    autoStart: true,
-                    delay: 100,
-                    stringSplitter,
-                  }}
-                  onInit={(typewriter) => {
-                    typewriter
-                      .typeString("I am a developer 💻")
-                      .pauseFor(1500)
-                      .deleteChars(11)
-                      .typeString("system administrator ⚙️")
-                      .pauseFor(1500)
-                      .deleteChars(22)
-                      .typeString("badminton lover 🏸")
-                      .pauseFor(1500)
-                      .deleteChars(19)
-                      .typeString("also a hiker 🥾")
-                      .pauseFor(1500)
-                      .start();
-                  }}
-                />
-                <div id="corner-bl" className="corner"></div>
-                <div id="corner-br" className="corner"></div>
+            <div className="left-column">
+              <img
+                id="profile_pic"
+                src={`${BASE_URL}images/self2.jpg`}
+                alt="selfie"
+              />
+              <h5 style={{ textAlign: "center", lineHeight: 0 }}>
+                Personalize Theme
+              </h5>
+
+              <div id="theme-options-wrapper">
+                {["light", "blue", "green", "purple"].map((mode) => (
+                  <button
+                    key={mode}
+                    data-mode={mode}
+                    className={`theme-dot ${
+                      currentTheme === mode ? "active" : ""
+                    }`}
+                    onClick={() => changeTheme(mode)}
+                    id={`${mode}-mode`}
+                    aria-label={`Switch to ${mode} theme`}
+                  ></button>
+                ))}
+              </div>
+              <p id="settings-note">
+                *Theme settings will be saved for <br />
+                your next visit
+              </p>
+            </div>
+            <div className="right-column">
+              <div id="preview-shadow">
+                <div id="preview">
+                  <div id="corner-tl" className="corner"></div>
+                  <div id="corner-tr" className="corner"></div>
+                  <h3 style={{ marginBottom: "20px" }}>Who Am I</h3>
+                  <Typewriter
+                    options={{
+                      wrapperClassName: "writer",
+                      loop: true,
+                      autoStart: true,
+                      delay: 100,
+                      stringSplitter,
+                    }}
+                    onInit={(typewriter) => {
+                      typewriter
+                        .typeString("I am a developer 💻")
+                        .pauseFor(1500)
+                        .deleteChars(11)
+                        .typeString("cloud engineer ☁️")
+                        .pauseFor(1500)
+                        .deleteChars(16)
+                        .typeString("badminton lover 🏸")
+                        .pauseFor(1500)
+                        .deleteChars(19)
+                        .typeString("also a hiker 🥾")
+                        .pauseFor(1500)
+                        .start();
+                    }}
+                  />
+                  <div id="corner-bl" className="corner"></div>
+                  <div id="corner-br" className="corner"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </ThemeProvider>
   );
 };
 

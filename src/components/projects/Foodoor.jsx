@@ -83,7 +83,7 @@ const Foodoor = () => {
                   <li>Git/Github</li>
                 </ul>
                 <h5>Demo Video</h5>
-                <div className="embed-responsive embed-responsive-16by9">
+                <div className="ratio ratio-16x9">
                   <iframe
                     title="foodoor Demo"
                     className="embed-responsive-item"

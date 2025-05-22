@@ -1,16 +1,16 @@
 import { useState } from "react";
 import {
-  FaHtml5,
-  FaCss3Alt,
-  FaPython,
-  FaNodeJs,
-  FaGitAlt,
-  FaReact,
-  FaAws,
-  FaDatabase,
-} from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io5";
-// import { Button, Form } from "react-bootstrap";
+  BiLogoPython,
+  BiLogoJavascript,
+  BiLogoNodejs,
+  BiLogoReact,
+  BiLogoDocker,
+  BiLogoKubernetes,
+  BiLogoGit,
+  BiLogoGoogleCloud,
+  BiLogoAws,
+  BiSolidData,
+} from "react-icons/bi";
 import { Row, Col, Button, Form } from "react-bootstrap";
 
 const About = () => {
@@ -35,18 +35,21 @@ const About = () => {
           <div className="about-me">
             <h4>About me</h4>
             <p>
-              Hi there, I'm a recent graduate from BCIT Computer Information
-              Technology Program with experience in Full-Stack Web/Moblie
-              Development, DevOps, and System Administration.
+              Hi there! I'm a backend developer with 3 years of hands-on
+              experience building and maintaining scalable web applications. I
+              specialize in backend development, cloud infrastructure (GCP), and
+              optimizing system performance.
             </p>
             <p>
-              I'm currently looking for a job and opportunity to contribute my
-              skills and knowledge to develop software/web application.
+              I'm actively seeking opportunities to develop impactful software
+              and web applications. I'm passionate about writing clean,
+              maintainable code and delivering robust solutions, eager to
+              contribute my expertise and continue growing as a developer.
             </p>
             <hr />
             <h4>Top Expertise</h4>
             <p className="mb-2">
-              Fullstack developer with variety programming skills:
+              Backend developer with variety programming skills:
             </p>
             <div className="mb-2">
               <a
@@ -70,33 +73,34 @@ const About = () => {
             <div id="skills">
               <ul className="no-list-style">
                 <li>
-                  <FaPython size={32} /> Python
+                  <BiLogoPython size={34} /> Python
                 </li>
                 <li>
-                  <IoLogoJavascript size={32} /> JavaScript
+                  <BiLogoJavascript size={34} /> JavaScript
                 </li>
                 <li>
-                  <FaNodeJs size={32} /> Node.js
+                  <BiLogoNodejs size={34} /> Node.js
                 </li>
 
                 <li>
-                  <FaReact size={32} /> React
+                  <BiLogoReact size={34} /> React
                 </li>
               </ul>
 
               <ul className="no-list-style">
                 <li>
-                  <FaHtml5 size={32} />
-                  <FaCss3Alt size={32} /> HTML/CSS
+                  <li>
+                    <BiLogoGoogleCloud size={34} />
+                    <BiLogoAws size={34} /> GCP/AWS
+                  </li>
+                  <BiLogoDocker size={34} />
+                  <BiLogoKubernetes size={34} /> Docker/K8S
                 </li>
                 <li>
-                  <FaDatabase size={32} /> SQL/NoSQL
+                  <BiSolidData size={34} /> SQL/NoSQL
                 </li>
                 <li>
-                  <FaGitAlt size={32} /> Git
-                </li>
-                <li>
-                  <FaAws size={32} /> AWS
+                  <BiLogoGit size={34} /> Git
                 </li>
               </ul>
             </div>
