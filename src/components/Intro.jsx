@@ -66,7 +66,7 @@ const Intro = () => {
               </h5>
 
               <div id="theme-options-wrapper">
-                {["light", "blue", "green", "purple"].map((mode) => (
+                {["light", "almond", "blue", "charcoal"].map((mode) => (
                   <button
                     key={mode}
                     data-mode={mode}

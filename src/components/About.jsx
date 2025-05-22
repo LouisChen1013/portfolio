@@ -21,7 +21,11 @@ const About = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    window.location.href = `mailto:chenhonglin1013@gmail.com?subject=${subject}&body=${message} %0D%0A%0D%0A Send from ${email}, ${name}`;
+    const mailSubject = encodeURIComponent(subject);
+    const mailBody = encodeURIComponent(
+      `${message}\n\nSend from ${email}, ${name}`
+    );
+    window.location.href = `mailto:chenhonglin1013@gmail.com?subject=${mailSubject}&body=${mailBody}`;
     setName("");
     setSubject("");
     setEmail("");
@@ -89,10 +93,10 @@ const About = () => {
 
               <ul className="no-list-style">
                 <li>
-                  <li>
-                    <BiLogoGoogleCloud size={34} />
-                    <BiLogoAws size={34} /> GCP/AWS
-                  </li>
+                  <BiLogoGoogleCloud size={34} />
+                  <BiLogoAws size={34} /> GCP/AWS
+                </li>
+                <li>
                   <BiLogoDocker size={34} />
                   <BiLogoKubernetes size={34} /> Docker/K8S
                 </li>
