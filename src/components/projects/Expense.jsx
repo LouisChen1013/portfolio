@@ -32,13 +32,13 @@ const Expense = () => {
           >
             <FaGithub className="ms-4 github-icon" size={39} />
           </a>
-          <a
+          {/* <a
             href="https://expense-tracker-demo-c.herokuapp.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            {/* <CgScreen className="ms-4 github-icon" size={39} /> */}
-          </a>
+            <CgScreen className="ms-4 github-icon" size={39} />
+          </a> */}
         </div>
         <Modal
           show={show}

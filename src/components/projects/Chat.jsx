@@ -33,13 +33,13 @@ const Chat = () => {
           >
             <FaGithub className="ms-4 github-icon" size={39} />
           </a>
-          <a
+          {/* <a
             href="https://lou-chatbox-app.herokuapp.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            {/* <CgScreen className="ms-4 github-icon" size={39} /> */}
-          </a>
+            <CgScreen className="ms-4 github-icon" size={39} />
+          </a> */}
         </div>
         <Modal
           show={show}
@@ -87,7 +87,6 @@ const Chat = () => {
                   <li>Socket.io</li>
                   <li>Javascript</li>
                   <li>Bootstrap</li>
-                  <li>Heroku</li>
                   <li>Git/Github</li>
                 </ul>
                 <h5>Demo Video</h5>

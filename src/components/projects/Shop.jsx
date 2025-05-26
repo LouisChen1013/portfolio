@@ -33,13 +33,13 @@ const Shop = () => {
           >
             <FaGithub className="ms-4 github-icon" size={39} />
           </a>
-          <a
+          {/* <a
             href="https://demoshop-c.herokuapp.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            {/* <CgScreen className="ml-4 github-icon" size={39} /> */}
-          </a>
+            <CgScreen className="ml-4 github-icon" size={39} />
+          </a> */}
         </div>
         <Modal
           show={show}
@@ -95,7 +95,6 @@ const Shop = () => {
                 <ul>
                   <li>React</li>
                   <li>Django</li>
-                  <li>Heroku</li>
                   <li>Sqlite</li>
                   <li>PostgreSQL</li>
                   <li>AWS</li>
