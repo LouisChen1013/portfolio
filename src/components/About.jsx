@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
   BiLogoPython,
   BiLogoJavascript,
@@ -13,25 +13,36 @@ import {
 } from "react-icons/bi";
 import { Row, Col, Button, Form } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
+import emailjs from "emailjs-com";
 
 const About = () => {
   const { t } = useTranslation();
-  const [name, setName] = useState("");
-  const [subject, setSubject] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const formRef = useRef();
+  const [status, setStatus] = useState("idle");
 
   const submitHandler = (e) => {
     e.preventDefault();
-    const mailSubject = encodeURIComponent(subject);
-    const mailBody = encodeURIComponent(
-      `${message}\n\nSend from ${email}, ${name}`
-    );
-    window.location.href = `mailto:chenhonglin1013@gmail.com?subject=${mailSubject}&body=${mailBody}`;
-    setName("");
-    setSubject("");
-    setEmail("");
-    setMessage("");
+    setStatus("sending");
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          alert("Email sent successfully!");
+          formRef.current.reset();
+          setStatus("idle");
+        },
+        (error) => {
+          console.error("Failed to send email:", error);
+          alert("Failed to send email.");
+          setStatus("idle");
+        }
+      );
   };
 
   return (
@@ -101,7 +112,12 @@ const About = () => {
 
           <div className="contact">
             <h4 className="text-center">{t("about.contact.title")}</h4>
-            <Form id="contact-form" onSubmit={submitHandler}>
+            <Form id="contact-form" ref={formRef} onSubmit={submitHandler}>
+              <Form.Control
+                type="hidden"
+                name="time"
+                value={new Date().toLocaleString()}
+              />
               <Row className="mb-3">
                 <Col md={12}>
                   <Form.Group controlId="validationName">
@@ -110,9 +126,8 @@ const About = () => {
                       required
                       size="sm"
                       type="text"
+                      name="name"
                       placeholder={t("about.contact.form.placeholder_name")}
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
                     />
                   </Form.Group>
                 </Col>
@@ -126,9 +141,8 @@ const About = () => {
                       required
                       size="sm"
                       type="text"
+                      name="subject"
                       placeholder={t("about.contact.form.placeholder_subject")}
-                      value={subject}
-                      onChange={(e) => setSubject(e.target.value)}
                     />
                   </Form.Group>
                 </Col>
@@ -142,9 +156,8 @@ const About = () => {
                       required
                       size="sm"
                       type="email"
+                      name="email"
                       placeholder={t("about.contact.form.placeholder_email")}
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </Form.Group>
                 </Col>
@@ -158,18 +171,23 @@ const About = () => {
                       as="textarea"
                       size="sm"
                       rows={6}
-                      placeholder={t("about.contact.form.placeholder_message")}
                       required
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
+                      name="message"
+                      placeholder={t("about.contact.form.placeholder_message")}
                     />
                   </Form.Group>
                 </Col>
               </Row>
 
               <div className="text-center">
-                <Button className="btn-color submit-btn" type="submit">
-                  {t("about.contact.form.submit")}
+                <Button
+                  className="btn-color submit-btn"
+                  type="submit"
+                  disabled={status === "sending"}
+                >
+                  {status === "sending"
+                    ? "Sending..."
+                    : t("about.contact.form.submit")}
                 </Button>
               </div>
             </Form>
