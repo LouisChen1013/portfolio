@@ -1,4 +1,6 @@
 import { useState, useCallback } from "react";
+import { useTranslation } from "react-i18next";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Typewriter from "typewriter-effect";
 import GraphemeSplitter from "grapheme-splitter";
 import ThemeProvider from "../themes/ThemeProvider";
@@ -19,12 +21,27 @@ const Intro = () => {
     return new GraphemeSplitter().splitGraphemes(string);
   }, []);
 
+  const { t, i18n } = useTranslation();
+
   return (
     <ThemeProvider theme={currentTheme}>
       <section className="s1">
         <div className="main-container">
-          <div className="greeting-wrapper">
-            <h1>Hi, I'm Louis Chen</h1>
+          <div className="top-wrapper">
+            <div className="language-floating">
+              <button
+                onClick={() => i18n.changeLanguage("en")}
+                className={i18n.language === "en" ? "active" : ""}
+              >
+                EN
+              </button>
+              <button
+                onClick={() => i18n.changeLanguage("zh")}
+                className={i18n.language === "zh" ? "active" : ""}
+              >
+                中文
+              </button>
+            </div>
           </div>
           <div className="intro-wrapper">
             <div className="nav-wrapper">
@@ -41,7 +58,7 @@ const Intro = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Github
+                    <FaGithub size={32} />
                   </a>
                 </li>
                 <li>
@@ -50,7 +67,7 @@ const Intro = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Linkedin
+                    <FaLinkedin size={32} />
                   </a>
                 </li>
               </ul>
@@ -61,8 +78,8 @@ const Intro = () => {
                 src={`${BASE_URL}images/self2.jpg`}
                 alt="selfie"
               />
-              <h5 style={{ textAlign: "center", lineHeight: 0 }}>
-                Personalize Theme
+              <h5 style={{ textAlign: "center", lineHeight: 1 }}>
+                {t("theme")}
               </h5>
 
               <div id="theme-options-wrapper">
@@ -80,8 +97,14 @@ const Intro = () => {
                 ))}
               </div>
               <p id="settings-note">
-                *Theme settings will be saved for <br />
-                your next visit
+                {t("theme_description")
+                  .split("\n")
+                  .map((line, i) => (
+                    <span key={i}>
+                      {line}
+                      <br />
+                    </span>
+                  ))}
               </p>
             </div>
             <div className="right-column">
@@ -89,8 +112,9 @@ const Intro = () => {
                 <div id="preview">
                   <div id="corner-tl" className="corner"></div>
                   <div id="corner-tr" className="corner"></div>
-                  <h3 style={{ marginBottom: "20px" }}>Who Am I</h3>
+                  <h3 style={{ marginBottom: "20px" }}>{t("intro")}</h3>
                   <Typewriter
+                    key={i18n.language}
                     options={{
                       wrapperClassName: "writer",
                       loop: true,
@@ -99,19 +123,29 @@ const Intro = () => {
                       stringSplitter,
                     }}
                     onInit={(typewriter) => {
-                      typewriter
-                        .typeString("I am a developer 💻")
-                        .pauseFor(1500)
-                        .deleteChars(11)
-                        .typeString("cloud engineer ☁️")
-                        .pauseFor(1500)
-                        .deleteChars(16)
-                        .typeString("badminton lover 🏸")
-                        .pauseFor(1500)
-                        .deleteChars(19)
-                        .typeString("also a hiker 🥾")
-                        .pauseFor(1500)
-                        .start();
+                      const base = t("typewriter.base_prefix");
+                      const roles = t("typewriter.roles", {
+                        returnObjects: true,
+                      });
+
+                      const getLength = (str) => stringSplitter(str).length;
+                      let chain = typewriter.typeString(base);
+
+                      roles.forEach((curr, idx) => {
+                        const fullRole = `${curr.connector}${curr.label} ${curr.emoji}`;
+                        chain = chain.typeString(fullRole).pauseFor(1500);
+
+                        const deleteCount = getLength(fullRole);
+                        if (idx < roles.length - 1) {
+                          chain = chain.deleteChars(deleteCount);
+                        } else {
+                          chain = chain
+                            .deleteChars(deleteCount)
+                            .deleteChars(getLength(base));
+                        }
+                      });
+
+                      chain.start();
                     }}
                   />
                   <div id="corner-bl" className="corner"></div>

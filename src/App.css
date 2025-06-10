@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;1,500&family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:wght@400;500&family=Russo+One&display=swap");
 
 /* create variables with global scope */
 :root {
@@ -36,7 +36,7 @@ h5,
 h6,
 strong {
   color: var(--mainText);
-  font-family: "Russo One", sans-serif;
+  font-family: "Russo One", "Noto Sans TC", sans-serif;
 }
 
 h1,
@@ -58,7 +58,7 @@ input,
 textarea,
 i {
   color: var(--secondaryText);
-  font-family: "Roboto Mono", monospace;
+  font-family: "Roboto", "Noto Sans TC", sans-serif;
 }
 
 a {
@@ -116,11 +116,8 @@ h6 {
   margin: 0 auto;
 }
 
-.greeting-wrapper {
-  display: grid;
-  text-align: center;
-  align-content: center;
-  min-height: 10em;
+.top-wrapper {
+  min-height: 5em;
 }
 
 .intro-wrapper {
@@ -151,19 +148,28 @@ h6 {
   border-radius: 5px 5px 0 0;
 }
 
-#navigation a {
-  color: var(--mainText);
-}
-
 #navigation {
-  margin: 0;
+  display: flex;
+  gap: 10px;
   padding: 10px;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
 }
 
 #navigation li {
   display: inline-block;
-  margin-right: 5px;
-  margin-left: 5px;
+}
+
+#navigation a {
+  color: var(--mainText);
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+#navigation a:hover {
+  color: var(--secondaryText);
 }
 
 .dots-wrapper {
@@ -503,6 +509,35 @@ img {
   padding-top: 10px;
   padding-bottom: 10px;
   font-family: "Roboto Mono", monospace;
+}
+
+.language-floating {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.language-floating button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.language-floating button.active {
+  background-color: #333;
+  color: #fff;
 }
 
 @media screen and (max-width: 1200px) {

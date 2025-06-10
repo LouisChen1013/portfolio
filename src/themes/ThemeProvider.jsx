@@ -35,15 +35,15 @@ const themeStyles = {
     "--buttonColor": "#d4a373",
   },
   charcoal: {
-    "--mainColor": "#1c1c1c",
-    "--secondaryColor": "#2a2a2a",
-    "--borderColor": "#333333",
-    "--mainText": "#f0f0f0",
-    "--secondaryText": "#aaaaaa",
+    "--mainColor": "#1a1a1a",
+    "--secondaryColor": "#2e2e2e",
+    "--borderColor": "#444444",
+    "--mainText": "#ffffff",
+    "--secondaryText": "#cccccc",
     "--themeDotBorder": "#ffffff",
-    "--previewBg": "rgba(28, 28, 28, 0.85)",
+    "--previewBg": "rgba(20, 20, 20, 0.9)",
     "--previewShadow": "#000000",
-    "--buttonColor": "#888888",
+    "--buttonColor": "#bbbbbb",
   },
 };
 

@@ -1,0 +1,98 @@
+{
+  "intro": "Hi, I'm Louis",
+  "theme": "Personalize Theme",
+  "theme_description": "*Theme settings will be saved for\nyour next visit",
+  "typewriter": {
+    "base_prefix": "I'm ",
+    "roles": [
+      { "connector": "a ", "label": "developer", "emoji": "💻" },
+      { "connector": "a ", "label": "cloud engineer", "emoji": "☁️" },
+      { "connector": "a ", "label": "badminton lover", "emoji": "🏸" },
+      { "connector": "also a ", "label": "hiker", "emoji": "🥾" }
+    ]
+  },
+  "about": {
+    "title": "About me",
+    "paragraphs": [
+      "Hi there! I'm a backend developer with 4 years of hands-on experience building and maintaining scalable web applications. I specialize in backend development, cloud infrastructure, and optimizing system performance.",
+      "I'm actively seeking opportunities to develop impactful software and web applications. I'm passionate about writing clean, maintainable code and delivering robust solutions, eager to contribute my expertise and continue growing as a developer."
+    ],
+    "expertise": {
+      "title": "Top Expertise",
+      "description": "Backend developer with variety programming skills:",
+      "resume_en": "Download Resume",
+      "resume_zh": "下載履歷"
+    },
+    "skills": {
+      "group1": ["Python", "JavaScript", "Node.js", "React"],
+      "group2": ["GCP/AWS", "Docker/K8S", "SQL/NoSQL", "Git"]
+    },
+    "contact": {
+      "title": "Contact",
+      "form": {
+        "name": "Name",
+        "subject": "Subject",
+        "email": "Email",
+        "message": "Message",
+        "placeholder_name": "Enter Name",
+        "placeholder_subject": "Enter Subject",
+        "placeholder_email": "Enter Email",
+        "placeholder_message": "Enter Message",
+        "submit": "Send"
+      }
+    }
+  },
+  "experience": {
+    "title": "Working Experience",
+    "jobs": [
+      {
+        "position": "Backend Developer",
+        "company": "Bat Mobile Data Technology Co., Ltd.",
+        "date": "OCTOBER 2021 - PRESENT",
+        "items": [
+          "Designed and implemented Node.js backend services for a Customer Data Platform, processing 250k–300k raw records monthly from the data team’s API and delivering structured, ready-to-use data to the frontend.",
+          "Introduced and configured a K8s load balancer on GCP to handle high traffic on a student community platform with 70,000+ registered users and 1,500+ monthly active users, significantly improving system stability and performance.",
+          "Built CI/CD pipelines with rolling updates, enabling zero-downtime deployments and accelerating release cycles.",
+          "Implemented real-time error monitoring with GCP Error Reporting and Sentry, reducing incident response time from hours to minutes.",
+          "Designed and launched full project infrastructure on GCP from scratch, including system architecture, database schema, backend services, and cloud provisioning."
+        ]
+      },
+      {
+        "position": "Full Stack Developer",
+        "company": "Contract @ BCIT School of Computing and Academic Studies",
+        "date": "SEPTEMBER 2020 - DECEMBER 2020",
+        "items": [
+          "Developed a management dashboard (CMS) that allowed faculty members/instructors to monitor and manage ISSP projects",
+          "Collaborated closely with other team members to analyze feature requirements, strategize implementation solutions, and deliver a written program based on clients' specifications",
+          "Researched and transformed clients' ideas and vision into a fully functional MVP",
+          "Applied Agile development to gather user feedback and respond constructively",
+          "Successfully optimized employees' workflow efficiency and further reduced the workload of our clients"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "diploma": {
+      "school": "British Columbia Institute of Technology",
+      "degree": "Computer Information Technology Diploma",
+      "date": "DECEMBER 2020",
+      "honour": "Graduated with Distinction",
+      "items": [
+        "Completed coursework in web development, data analysis, and system administration",
+        "Ensured code meets the professional standards and requirements by implementing unit testing methods",
+        "Gained practical skills and experiences by working and learning with industry clients and professionals"
+      ]
+    },
+    "bachelor": {
+      "school": "The University of British Columbia",
+      "degree": "Bachelor of Arts: Psychology",
+      "date": "MAY 2017",
+      "items": [
+        "Developed advanced writing, research, and presentation skills through experiments and reports",
+        "Enhanced and expanded knowledge of human science, social interaction and data analysis",
+        "Completed coursework in economics, international finance, and statistics"
+      ]
+    }
+  }
+}

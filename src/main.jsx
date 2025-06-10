@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap CSS
 import "./App.css";
+import "./i18n";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

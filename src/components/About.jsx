@@ -12,8 +12,10 @@ import {
   BiSolidData,
 } from "react-icons/bi";
 import { Row, Col, Button, Form } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
   const [name, setName] = useState("");
   const [subject, setSubject] = useState("");
   const [email, setEmail] = useState("");
@@ -37,31 +39,19 @@ const About = () => {
       <div className="main-container">
         <div className="about-wrapper">
           <div className="about-me">
-            <h4>About me</h4>
-            <p>
-              Hi there! I'm a backend developer with 3 years of hands-on
-              experience building and maintaining scalable web applications. I
-              specialize in backend development, cloud infrastructure (GCP), and
-              optimizing system performance.
-            </p>
-            <p>
-              I'm actively seeking opportunities to develop impactful software
-              and web applications. I'm passionate about writing clean,
-              maintainable code and delivering robust solutions, eager to
-              contribute my expertise and continue growing as a developer.
-            </p>
+            <h4>{t("about.title")}</h4>
+            <p>{t("about.paragraphs.0")}</p>
+            <p>{t("about.paragraphs.1")}</p>
             <hr />
-            <h4>Top Expertise</h4>
-            <p className="mb-2">
-              Backend developer with variety programming skills:
-            </p>
+            <h4>{t("about.expertise.title")}</h4>
+            <p className="mb-2">{t("about.expertise.description")}</p>
             <div className="mb-2">
               <a
                 target="_blank"
                 href="files/Louis_Chen.pdf"
                 rel="noopener noreferrer"
               >
-                Download Resume
+                {t("about.expertise.resume_en")}
               </a>
             </div>
             <div className="mb-3">
@@ -70,58 +60,57 @@ const About = () => {
                 href="files/Louis_Chen_C.pdf"
                 rel="noopener noreferrer"
               >
-                下載履歷
+                {t("about.expertise.resume_zh")}
               </a>
             </div>
 
             <div id="skills">
               <ul className="no-list-style">
                 <li>
-                  <BiLogoPython size={34} /> Python
+                  <BiLogoPython size={34} /> {t("about.skills.group1.0")}
                 </li>
                 <li>
-                  <BiLogoJavascript size={34} /> JavaScript
+                  <BiLogoJavascript size={34} /> {t("about.skills.group1.1")}
                 </li>
                 <li>
-                  <BiLogoNodejs size={34} /> Node.js
+                  <BiLogoNodejs size={34} /> {t("about.skills.group1.2")}
                 </li>
-
                 <li>
-                  <BiLogoReact size={34} /> React
+                  <BiLogoReact size={34} /> {t("about.skills.group1.3")}
                 </li>
               </ul>
 
               <ul className="no-list-style">
                 <li>
                   <BiLogoGoogleCloud size={34} />
-                  <BiLogoAws size={34} /> GCP/AWS
+                  <BiLogoAws size={34} /> {t("about.skills.group2.0")}
                 </li>
                 <li>
                   <BiLogoDocker size={34} />
-                  <BiLogoKubernetes size={34} /> Docker/K8S
+                  <BiLogoKubernetes size={34} /> {t("about.skills.group2.1")}
                 </li>
                 <li>
-                  <BiSolidData size={34} /> SQL/NoSQL
+                  <BiSolidData size={34} /> {t("about.skills.group2.2")}
                 </li>
                 <li>
-                  <BiLogoGit size={34} /> Git
+                  <BiLogoGit size={34} /> {t("about.skills.group2.3")}
                 </li>
               </ul>
             </div>
           </div>
 
           <div className="contact">
-            <h4 className="text-center">Contact</h4>
+            <h4 className="text-center">{t("about.contact.title")}</h4>
             <Form id="contact-form" onSubmit={submitHandler}>
               <Row className="mb-3">
                 <Col md={12}>
                   <Form.Group controlId="validationName">
-                    <Form.Label>Name</Form.Label>
+                    <Form.Label>{t("about.contact.form.name")}</Form.Label>
                     <Form.Control
                       required
                       size="sm"
                       type="text"
-                      placeholder="Enter Name"
+                      placeholder={t("about.contact.form.placeholder_name")}
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                     />
@@ -132,12 +121,12 @@ const About = () => {
               <Row className="mb-3">
                 <Col md={12}>
                   <Form.Group controlId="validationSubject">
-                    <Form.Label>Subject</Form.Label>
+                    <Form.Label>{t("about.contact.form.subject")}</Form.Label>
                     <Form.Control
                       required
                       size="sm"
                       type="text"
-                      placeholder="Enter Subject"
+                      placeholder={t("about.contact.form.placeholder_subject")}
                       value={subject}
                       onChange={(e) => setSubject(e.target.value)}
                     />
@@ -148,12 +137,12 @@ const About = () => {
               <Row className="mb-3">
                 <Col md={12}>
                   <Form.Group controlId="validationEmail">
-                    <Form.Label>Email</Form.Label>
+                    <Form.Label>{t("about.contact.form.email")}</Form.Label>
                     <Form.Control
                       required
                       size="sm"
                       type="email"
-                      placeholder="Enter Email"
+                      placeholder={t("about.contact.form.placeholder_email")}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
@@ -164,12 +153,12 @@ const About = () => {
               <Row className="mb-3">
                 <Col md={12}>
                   <Form.Group controlId="MessageForm.ControlTextarea">
-                    <Form.Label>Message</Form.Label>
+                    <Form.Label>{t("about.contact.form.message")}</Form.Label>
                     <Form.Control
                       as="textarea"
                       size="sm"
                       rows={6}
-                      placeholder="Enter Message"
+                      placeholder={t("about.contact.form.placeholder_message")}
                       required
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
@@ -180,7 +169,7 @@ const About = () => {
 
               <div className="text-center">
                 <Button className="btn-color submit-btn" type="submit">
-                  Send
+                  {t("about.contact.form.submit")}
                 </Button>
               </div>
             </Form>
