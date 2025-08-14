@@ -8,7 +8,7 @@
       { "connector": "a ", "label": "developer", "emoji": "💻" },
       { "connector": "a ", "label": "cloud engineer", "emoji": "☁️" },
       { "connector": "a ", "label": "badminton lover", "emoji": "🏸" },
-      { "connector": "also a ", "label": "hiker", "emoji": "🥾" }
+      { "connector": "also a ", "label": "traveler", "emoji": "🗺️" }
     ]
   },
   "about": {
@@ -43,18 +43,17 @@
     }
   },
   "experience": {
-    "title": "Working Experience",
+    "title": "Work Experience",
     "jobs": [
       {
         "position": "Backend Developer",
-        "company": "Bat Mobile Data Technology Co., Ltd.",
+        "company": "BAT Mobile Inc.",
         "date": "OCTOBER 2021 - PRESENT",
         "items": [
-          "Designed and implemented Node.js backend services for a Customer Data Platform, processing 250k–300k raw records monthly from the data team’s API and delivering structured, ready-to-use data to the frontend.",
-          "Introduced and configured a K8s load balancer on GCP to handle high traffic on a student community platform with 70,000+ registered users and 1,500+ monthly active users, significantly improving system stability and performance.",
-          "Built CI/CD pipelines with rolling updates, enabling zero-downtime deployments and accelerating release cycles.",
-          "Implemented real-time error monitoring with GCP Error Reporting and Sentry, reducing incident response time from hours to minutes.",
-          "Designed and launched full project infrastructure on GCP from scratch, including system architecture, database schema, backend services, and cloud provisioning."
+          "Built a Node.js backend for a Customer Data Platform, processing 250k–300k records monthly into frontend-ready datasets.",
+          "Optimized performance and stability for a student platform with 70k+ registered users and 1.5k+ monthly active users, reducing downtime and latency under high traffic.",
+          "Deployed and configured GCP cloud infrastructure from scratch, incorporating Kubernetes load balancing, database schema, backend services, and CI/CD pipelines with zero-downtime rolling updates.",
+          "Implemented real-time error monitoring with GCP Error Reporting and Sentry, reducing incident response time from hours to minutes."
         ]
       },
       {
@@ -62,11 +61,10 @@
         "company": "Contract @ BCIT School of Computing and Academic Studies",
         "date": "SEPTEMBER 2020 - DECEMBER 2020",
         "items": [
-          "Developed a management dashboard (CMS) that allowed faculty members/instructors to monitor and manage ISSP projects",
-          "Collaborated closely with other team members to analyze feature requirements, strategize implementation solutions, and deliver a written program based on clients' specifications",
-          "Researched and transformed clients' ideas and vision into a fully functional MVP",
-          "Applied Agile development to gather user feedback and respond constructively",
-          "Successfully optimized employees' workflow efficiency and further reduced the workload of our clients"
+          "Developed a management dashboard (CMS) enabling faculty and instructors to monitor and manage ISSP projects in real time",
+          "Collaborated in Agile teams to analyze requirements and design effective implementation plans",
+          "Transformed client ideas into a fully functional MVP, incorporating user feedback to refine features",
+          "Optimized processes to significantly reduce client workload and improve employee workflow efficiency."
         ]
       }
     ]
@@ -80,8 +78,8 @@
       "honour": "Graduated with Distinction",
       "items": [
         "Completed coursework in web development, data analysis, and system administration",
-        "Ensured code meets the professional standards and requirements by implementing unit testing methods",
-        "Gained practical skills and experiences by working and learning with industry clients and professionals"
+        "Implemented unit testing to ensure code quality and adherence to professional standards",
+        "Gained hands-on experience collaborating with industry clients and professionals"
       ]
     },
     "bachelor": {
@@ -94,5 +92,6 @@
         "Completed coursework in economics, international finance, and statistics"
       ]
     }
-  }
+  },
+  "project": "Some of my past projects"
 }

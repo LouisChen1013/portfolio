@@ -3,7 +3,7 @@ import { Button, Modal } from "react-bootstrap";
 import { FaGithub } from "react-icons/fa";
 const BASE_URL = import.meta.env.BASE_URL;
 
-const Camp = () => {
+const Travel = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -12,12 +12,12 @@ const Camp = () => {
     <div className="project">
       <img
         className="thumbnail"
-        src={`${BASE_URL}images/camp_biology/home.png`}
+        src={`${BASE_URL}images/travel_biology/home.png`}
         alt="home"
       />
       <div className="project-preview">
         <div className="text-center">
-          <h6 className="project-title mb-3">Camp Biology</h6>
+          <h6 className="project-title mb-3">Travel Biology</h6>
 
           <Button
             className="btn-color justify-content-center"
@@ -26,7 +26,7 @@ const Camp = () => {
             Read More
           </Button>
           <a
-            href="https://github.com/LouisChen1013/Camp-Biology"
+            href="https://github.com/LouisChen1013/travel-biology"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -56,85 +56,94 @@ const Camp = () => {
               </div>
 
               <div className="main-context">
-                <h3>Camp Biology</h3>
+                <h3>Travel Biology</h3>
                 <h5>Objective:</h5>
                 <p>
-                  Camp Biloigy is a web application that allows you to share
-                  your best campsites around the world. Once you sign-up, you
-                  can begin to create your own campgrounds and comment on others
-                  campsites. Get started exploring our amazing campgrounds!
+                  Travel Biology is an all-in-one travel planning web
+                  application. It enables users to create and organize detailed
+                  trips, manage budgets, plan daily schedules, map out
+                  destinations, track flights, and more — all in a clean,
+                  responsive interface.
                 </p>
                 <h5>Key Features:</h5>
                 <ul>
-                  <li>User registration & login & logout portals</li>
-                  <li>Full campsite description & information</li>
-                  <li>Campsite details with map and photo slideshow</li>
-                  <li>
-                    Campground add & edit & delete & view functionalities (CRUD)
-                  </li>
-                  <li>Campground reviews & ratings</li>
+                  <li>Plan and share trips</li>
+                  <li>Create daily schedules with stops/attractions</li>
+                  <li>Display stops on interactive maps (Mapbox)</li>
+                  <li>Add and manage flight information</li>
+                  <li>Track and convert budget in multiple currencies</li>
+                  <li>Upload and browse trip photos</li>
+                  <li>User registration and authentication (JWT)</li>
+                  <li>Maintain personal to-do lists for trips</li>
                 </ul>
                 <h5>Technologies:</h5>
                 <ul>
-                  <li>Node.js</li>
-                  <li>Express.js</li>
-                  <li>Passport.js</li>
-                  <li>EJS</li>
-                  <li>Bootstrap</li>
+                  <li>Node.js, Express.js</li>
+                  <li>Passport.js with JWT</li>
+                  <li>PostgreSQL using Sequelize ORM</li>
+                  <li>React (with Vite), Bootstrap CSS</li>
                   <li>Cloudinary</li>
                   <li>Mapbox</li>
-                  <li>MongoDB</li>
                   <li>Git/Github</li>
                 </ul>
                 <br />
-                <h5>Home page & Main page</h5>
+                <h5>Home Page & Trip Overview</h5>
                 <div className="img-container">
                   <img
-                    src={`${BASE_URL}images/camp_biology/home.png`}
+                    src={`${BASE_URL}images/travel_biology/home.png`}
                     alt="home_page"
                   />
                 </div>
+                <h5>Register & Login</h5>
                 <div className="img-container">
                   <img
-                    src={`${BASE_URL}images/camp_biology/main.png`}
-                    alt="main_page"
-                  />
-                </div>
-                <h5>Register & Login Screen</h5>
-                <div className="img-container">
-                  <img
-                    src={`${BASE_URL}images/camp_biology/register.png`}
+                    src={`${BASE_URL}images/travel_biology/register.png`}
                     alt="register"
                   />
+                </div>
+                <div className="img-container">
                   <img
-                    src={`${BASE_URL}images/camp_biology/login.png`}
+                    src={`${BASE_URL}images/travel_biology/login.png`}
                     alt="login"
                   />
                 </div>
-                <h5>Campground add & edit & delete functionalities</h5>
+                <h5>Daily Schedule & Stops (Map Integration)</h5>
                 <div className="img-container">
                   <img
-                    src={`${BASE_URL}images/camp_biology/camp.png`}
-                    alt="camp"
+                    src={`${BASE_URL}images/travel_biology/daily_schedule.png`}
+                    alt="daily_schedule"
                   />
                 </div>
                 <div className="img-container">
                   <img
-                    src={`${BASE_URL}images/camp_biology/new.png`}
-                    alt="new"
+                    src={`${BASE_URL}images/travel_biology/map_with_stops.png`}
+                    alt="map_with_stops"
+                  />
+                </div>
+                <h5>Flight Info & Trip Budget</h5>
+                <div className="img-container">
+                  <img
+                    src={`${BASE_URL}images/travel_biology/flight_info.png`}
+                    alt="flight_info"
                   />
                 </div>
                 <div className="img-container">
                   <img
-                    src={`${BASE_URL}images/camp_biology/edit.png`}
-                    alt="edit"
+                    src={`${BASE_URL}images/travel_biology/budget.png`}
+                    alt="budget"
                   />
                 </div>
-                <h5>Campground details and review page</h5>
+                <h5>Trip Photos & To-Do List</h5>
                 <div className="img-container">
                   <img
-                    src={`${BASE_URL}images/camp_biology/show.png`}
-                    alt="show"
+                    src={`${BASE_URL}images/travel_biology/todo_list.png`}
+                    alt="todo_list"
+                  />
+                </div>
+                <div className="img-container">
+                  <img
+                    src={`${BASE_URL}images/travel_biology/trip_photos.png`}
+                    alt="trip_photos"
                   />
                 </div>
               </div>
@@ -151,4 +160,4 @@ const Camp = () => {
   );
 };
 
-export default Camp;
+export default Travel;

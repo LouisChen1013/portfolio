@@ -25,7 +25,7 @@ const Character = () => {
             Read More
           </Button>
           <a
-            href="https://github.com/LouisChen1013/CharacterManagementSystem"
+            href="https://github.com/LouisChen1013/character-management-system"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -58,23 +58,28 @@ const Character = () => {
                 <h3>Character Management System</h3>
                 <h5>Objective:</h5>
                 <p>
-                  The purpose of this project is to simulate a game server
-                  management system. We build a GUI application with Tkinter
-                  that allows a user to manage the server. Users are able to
-                  query, add, update, and delete characters from the server.
+                  A desktop application that simulates a game server management
+                  system. It features a graphical interface built with Tkinter
+                  and a Flask-powered API backend, allowing users to manage game
+                  characters with full CRUD functionality.
                 </p>
                 <h5>Key Features:</h5>
                 <ul>
-                  <li>Interfaces to query/add/update/delete characters</li>
-                  <li>Server Summary and Status</li>
-                  <li>Implement with Tkinter and Flask</li>
+                  <li>
+                    Interfaces to query/add/update/delete characters (CRUD)
+                  </li>
+                  <li>Display server summary and statistics</li>
+                  <li>Built with Tkinter (GUI) and Flask (API)</li>
+                  <li>Data stored using SQLite</li>
                 </ul>
                 <h5>Technologies:</h5>
                 <ul>
                   <li>Python</li>
-                  <li>SQLite</li>
-                  <li>Tkinter</li>
                   <li>Flask</li>
+                  <li>Tkinter</li>
+                  <li>SQLite</li>
+                  <li>OOP</li>
+                  <li>Unit Test</li>
                   <li>UML</li>
                   <li>Git/Github</li>
                 </ul>
@@ -98,6 +103,8 @@ const Character = () => {
                     src={`${BASE_URL}images/character_management_system/add_player.png`}
                     alt="add_player"
                   />
+                </div>
+                <div className="img-container">
                   <img
                     src={`${BASE_URL}images/character_management_system/add_monster.png`}
                     alt="add_monster"
@@ -123,6 +130,8 @@ const Character = () => {
                     src={`${BASE_URL}images/character_management_system/show_player.png`}
                     alt="show_player"
                   />
+                </div>
+                <div className="img-container">
                   <img
                     src={`${BASE_URL}images/character_management_system/show_monster.png`}
                     alt="show_monster"

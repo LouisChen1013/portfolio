@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { FaGithub } from "react-icons/fa";
 const BASE_URL = import.meta.env.BASE_URL;
+// import { CgScreen } from "react-icons/cg";
 
-const Expense = () => {
+const ImageConverter = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -12,12 +13,12 @@ const Expense = () => {
     <div className="project">
       <img
         className="thumbnail"
-        src={`${BASE_URL}images/expense_tracker/expense_tracker.png`}
+        src={`${BASE_URL}images/image_converter/image_converter.png`}
         alt="dashboard"
       />
       <div className="project-preview">
         <div className="text-center">
-          <h6 className="project-title mb-3">Expense Tracker</h6>
+          <h6 className="project-title mb-3">Image Converter</h6>
           <Button
             className="btn-color justify-content-center"
             onClick={handleShow}
@@ -25,7 +26,7 @@ const Expense = () => {
             Read More
           </Button>
           <a
-            href="https://github.com/LouisChen1013/expense-tracker"
+            href="https://github.com/LouisChen1013/image-converter-app"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -55,67 +56,60 @@ const Expense = () => {
               </div>
 
               <div className="main-context">
-                <h3>Expense Tracker</h3>
+                <h3>Image Converter</h3>
                 <h5>Objective:</h5>
                 <p>
-                  A web interface built with MongoDB, Express, React, Node(MERN)
-                  for users to manage their daily transactions. Implementing
-                  with CRUD operations where users can create, update, delete
-                  their transactions and further review their spending history
-                  from previous periods.
+                  A web application that allows users to upload images and
+                  convert them into different formats (JPEG, PNG, WebP). It
+                  supports resizing, grayscale conversion, and quality
+                  adjustment to optimize images.
                 </p>
                 <h5>Key Features:</h5>
                 <ul>
                   <li>
-                    Interfaces to create, update, delete, and view transactions
-                    (CRUD)
+                    Upload images and convert to multiple formats (JPEG, PNG,
+                    WebP)
                   </li>
-                  <li>View spending history and balance</li>
-                  <li>Implement with the MERN Stack</li>
+                  <li>Resize images with custom width and height</li>
+                  <li>Convert images to grayscale</li>
+                  <li>Adjust image quality for compression</li>
+                  <li>
+                    Download single images or batch download as a ZIP archive
+                  </li>
                 </ul>
                 <h5>Technologies:</h5>
                 <ul>
-                  <li>Node.js</li>
-                  <li>Express.js</li>
-                  <li>MongoDB</li>
-                  <li>React</li>
-                  <li>Git/Github</li>
+                  <li>FastAPI (Python)</li>
+                  <li>React with Vite, Tailwind CSS</li>
+                  <li>Docker & Docker Compose</li>
+                  <li>Git/GitHub</li>
                 </ul>
-                <h5>Demo Video</h5>
-                <div className="ratio ratio-16x9">
-                  <iframe
-                    title="ChatBox Demo"
-                    className="embed-responsive-item"
-                    src="https://youtube.com/embed/FtE6UJupfzk"
-                    allowFullScreen={true}
-                  ></iframe>
-                </div>
                 <h5>App Interface</h5>
                 <div className="img-container">
                   <img
-                    src={`${BASE_URL}images/expense_tracker/expense_tracker.png`}
+                    src={`${BASE_URL}images/image_converter/interface.png`}
                     alt="app_interface"
                   />
                 </div>
-                <h5>Interface to add a transaction</h5>
+                <h5>Image Upload</h5>
                 <div className="img-container">
                   <img
-                    src={`${BASE_URL}images/expense_tracker/add_transaction.png`}
-                    alt="add_transaction"
+                    src={`${BASE_URL}images/image_converter/upload.png`}
+                    alt="upload_section"
                   />
                 </div>
-                <h5>Interface to edit a transaction</h5>
+                <h5>Form for Conversion Options</h5>
                 <div className="img-container">
                   <img
-                    src={`${BASE_URL}images/expense_tracker/edit_transaction.png`}
-                    alt="add_transaction"
+                    src={`${BASE_URL}images/image_converter/form.png`}
+                    alt="conversion_form"
                   />
                 </div>
-                <h5>Interface to delete & review transactions</h5>
+                <h5>Conversion Result Display</h5>
                 <div className="img-container">
                   <img
-                    src={`${BASE_URL}images/expense_tracker/delete_transaction.png`}
-                    alt="delete_review_transactions"
+                    src={`${BASE_URL}images/image_converter/convert.png`}
+                    alt="conversion_result"
                   />
                 </div>
               </div>
@@ -132,4 +126,4 @@ const Expense = () => {
   );
 };
 
-export default Expense;
+export default ImageConverter;

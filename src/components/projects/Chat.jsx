@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { FaGithub } from "react-icons/fa";
 const BASE_URL = import.meta.env.BASE_URL;
-// import { CgScreen } from "react-icons/cg";
 
 const Chat = () => {
   const [show, setShow] = useState(false);
@@ -33,13 +32,6 @@ const Chat = () => {
           >
             <FaGithub className="ms-4 github-icon" size={39} />
           </a>
-          {/* <a
-            href="https://lou-chatbox-app.herokuapp.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <CgScreen className="ms-4 github-icon" size={39} />
-          </a> */}
         </div>
         <Modal
           show={show}
