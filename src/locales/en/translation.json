@@ -52,7 +52,7 @@
         "items": [
           "Built a Node.js backend for a Customer Data Platform, processing 250k–300k records monthly into frontend-ready datasets.",
           "Optimized performance and stability for a student platform with 70k+ registered users and 1.5k+ monthly active users, reducing downtime and latency under high traffic.",
-          "Deployed and configured GCP cloud infrastructure from scratch, incorporating Kubernetes load balancing, database schema, backend services, and CI/CD pipelines with zero-downtime rolling updates.",
+          "Deployed and configured GCP cloud infrastructure from scratch, including Kubernetes, database schemas, backend services, CI/CD pipelines, and firewall, enabling zero-downtime rolling updates.",
           "Implemented real-time error monitoring with GCP Error Reporting and Sentry, reducing incident response time from hours to minutes."
         ]
       },
@@ -61,9 +61,9 @@
         "company": "Contract @ BCIT School of Computing and Academic Studies",
         "date": "SEPTEMBER 2020 - DECEMBER 2020",
         "items": [
-          "Developed a management dashboard (CMS) enabling faculty and instructors to monitor and manage ISSP projects in real time",
-          "Collaborated in Agile teams to analyze requirements and design effective implementation plans",
-          "Transformed client ideas into a fully functional MVP, incorporating user feedback to refine features",
+          "Developed a management dashboard (CMS) enabling faculty and instructors to monitor and manage ISSP projects in real time.",
+          "Collaborated in Agile teams to analyze requirements and design effective implementation plans.",
+          "Delivered a fully functional MVP based on client requests, incorporating user feedback to refine features.",
           "Optimized processes to significantly reduce client workload and improve employee workflow efficiency."
         ]
       }
