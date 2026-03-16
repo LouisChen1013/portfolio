@@ -50,10 +50,10 @@
         "company": "BAT Mobile Inc.",
         "date": "OCTOBER 2021 - PRESENT",
         "items": [
-          "Built a Node.js backend for a Customer Data Platform, processing 250k–300k records monthly into frontend-ready datasets.",
-          "Optimized performance and stability for a student platform with 670k+ registered users and 1.5k+ monthly active users, reducing downtime and latency under high traffic.",
-          "Deployed and configured GCP cloud infrastructure from scratch, including Kubernetes, database schemas, backend services, CI/CD pipelines, and firewall, enabling zero-downtime rolling updates.",
-          "Implemented real-time error monitoring with GCP Error Reporting and Sentry, reducing incident response time from hours to minutes."
+          "Architected a Node.js Customer Data Platform (CDP) processing 300k+ monthly records; optimized query performance via caching and asynchronous processing to deliver frontend-ready datasets.",
+          "Enhanced student platform stability for 670k+ users by refactoring APIs and implementing load balancing strategies, significantly reducing latency under high-concurrency traffic.",
+          "Led GCP infrastructure setup (K8s, CI/CD, Firewall) and migrated VMs to GKE/Cloud Run to enable Auto-scaling and Rolling Updates, cutting costs by 30% while maintaining zero-downtime deployment.",
+          "Established an automated monitoring and incident response system using GCP Error Reporting and Sentry, accelerating troubleshooting and reducing recovery time from hours to minutes."
         ]
       },
       {
@@ -61,10 +61,10 @@
         "company": "Contract @ BCIT School of Computing and Academic Studies",
         "date": "SEPTEMBER 2020 - DECEMBER 2020",
         "items": [
-          "Developed a management dashboard (CMS) enabling faculty and instructors to monitor and manage ISSP projects in real time.",
-          "Collaborated in Agile teams to analyze requirements and design effective implementation plans.",
-          "Delivered a fully functional MVP based on client requests, incorporating user feedback to refine features.",
-          "Optimized processes to significantly reduce client workload and improve employee workflow efficiency."
+          "Architected a CMS dashboard enabling faculty to monitor and manage ISSP projects in real-time, enhancing project visibility and tracking.",
+          "Collaborated in Agile teams to translate complex requirements into technical designs and actionable implementation plans.",
+          "Delivered a fully functional MVP on schedule, iteratively refining features based on client feedback to ensure high system usability and alignment with faculty needs.",
+          "Developed automated management features to replace manual workflows, significantly reducing administrative workload and improving overall efficiency."
         ]
       }
     ]
