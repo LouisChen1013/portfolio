@@ -1,39 +1,43 @@
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { FaGithub } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 const BASE_URL = import.meta.env.BASE_URL;
 
 const BCIT = () => {
+  const { t } = useTranslation();
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
     <div className="project">
-      <img
-        className="thumbnail"
-        src={`${BASE_URL}images/BCIT_SOCAS/dash.png`}
-        alt="dashboard"
-      />
+      <div className="thumbnail-container">
+        <img
+          className="thumbnail"
+          src={`${BASE_URL}images/BCIT_SOCAS/dash.png`}
+          alt="dashboard"
+        />
+      </div>
       <div className="project-preview">
-        <div className="text-center">
-          <h6 className="project-title mb-3">
-            Submission Management Dashboard
-          </h6>
+        <h6 className="project-title">Submission Management Dashboard</h6>
 
+        <div className="text-center">
           <Button
-            className="btn-color justify-content-center"
+            className="btn-color project-info-btn"
             onClick={handleShow}
           >
-            Read More
+            {t("read_more")}
           </Button>
-          <a
-            href="https://github.com/LouisChen1013/SubmissionManagementDashboard"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub className="ms-4 github-icon" size={39} />
-          </a>
+          <div className="github-link-container">
+            <a
+              href="https://github.com/LouisChen1013/SubmissionManagementDashboard"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="github-icon" size={32} />
+            </a>
+          </div>
         </div>
         <Modal
           show={show}
