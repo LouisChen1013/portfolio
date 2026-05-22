@@ -10,10 +10,15 @@ import {
   BiLogoGoogleCloud,
   BiLogoAws,
   BiSolidData,
+  BiDownload,
+  BiMessageDetail,
 } from "react-icons/bi";
+import { SiTerraform, SiGrafana, SiOpenai } from "react-icons/si";
 import { Row, Col, Button, Form } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import emailjs from "emailjs-com";
+
+const BASE_URL = import.meta.env.BASE_URL;
 
 const About = () => {
   const { t } = useTranslation();
@@ -29,7 +34,7 @@ const About = () => {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
       .then(
         () => {
@@ -41,7 +46,7 @@ const About = () => {
           console.error("Failed to send email:", error);
           alert("Failed to send email.");
           setStatus("idle");
-        }
+        },
       );
   };
 
@@ -56,57 +61,58 @@ const About = () => {
             <hr />
             <h4>{t("about.expertise.title")}</h4>
             <p className="mb-2">{t("about.expertise.description")}</p>
-            <div className="mb-2">
-              <a
-                target="_blank"
-                href="files/Louis_Chen.pdf"
-                rel="noopener noreferrer"
-              >
-                {t("about.expertise.resume_en")}
-              </a>
-            </div>
-            <div className="mb-3">
-              <a
-                target="_blank"
-                href="files/Louis_Chen_C.pdf"
-                rel="noopener noreferrer"
-              >
-                {t("about.expertise.resume_zh")}
-              </a>
-            </div>
 
             <div id="skills">
-              <ul className="no-list-style">
-                <li>
-                  <BiLogoPython size={34} /> {t("about.skills.group1.0")}
-                </li>
-                <li>
-                  <BiLogoJavascript size={34} /> {t("about.skills.group1.1")}
-                </li>
-                <li>
-                  <BiLogoNodejs size={34} /> {t("about.skills.group1.2")}
-                </li>
-                <li>
-                  <BiLogoReact size={34} /> {t("about.skills.group1.3")}
-                </li>
-              </ul>
-
-              <ul className="no-list-style">
-                <li>
-                  <BiLogoGoogleCloud size={34} />
-                  <BiLogoAws size={34} /> {t("about.skills.group2.0")}
-                </li>
-                <li>
-                  <BiLogoDocker size={34} />
-                  <BiLogoKubernetes size={34} /> {t("about.skills.group2.1")}
-                </li>
-                <li>
-                  <BiSolidData size={34} /> {t("about.skills.group2.2")}
-                </li>
-                <li>
-                  <BiLogoGit size={34} /> {t("about.skills.group2.3")}
-                </li>
-              </ul>
+              <div className="skills-grid">
+                <div className="skill-tag">
+                  <BiLogoPython size={24} />{" "}
+                  <span>{t("about.skills.group1.0")}</span>
+                </div>
+                <div className="skill-tag">
+                  <BiLogoJavascript size={24} />{" "}
+                  <span>{t("about.skills.group1.1")}</span>
+                </div>
+                <div className="skill-tag">
+                  <BiLogoNodejs size={24} />{" "}
+                  <span>{t("about.skills.group1.2")}</span>
+                </div>
+                <div className="skill-tag">
+                  <BiLogoReact size={24} />{" "}
+                  <span>{t("about.skills.group1.3")}</span>
+                </div>
+                <div className="skill-tag">
+                  <BiLogoGoogleCloud size={24} />{" "}
+                  <span>{t("about.skills.group2.0")}</span>
+                </div>
+                <div className="skill-tag">
+                  <BiLogoDocker size={24} />{" "}
+                  <span>{t("about.skills.group2.1")}</span>
+                </div>
+                <div className="skill-tag">
+                  <BiSolidData size={24} />{" "}
+                  <span>{t("about.skills.group2.2")}</span>
+                </div>
+                <div className="skill-tag">
+                  <BiLogoGit size={24} />{" "}
+                  <span>{t("about.skills.group2.3")}</span>
+                </div>
+                <div className="skill-tag">
+                  <SiTerraform size={24} />{" "}
+                  <span>Ansible/Terraform</span>
+                </div>
+                <div className="skill-tag">
+                  <SiGrafana size={24} />{" "}
+                  <span>Prometheus/Grafana</span>
+                </div>
+                <div className="skill-tag">
+                  <SiOpenai size={24} />{" "}
+                  <span>AI Agents</span>
+                </div>
+                <div className="skill-tag">
+                  <BiMessageDetail size={24} />{" "}
+                  <span>Prompt Engineering</span>
+                </div>
+              </div>
             </div>
           </div>
 

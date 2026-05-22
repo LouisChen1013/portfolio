@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { BiDownload } from "react-icons/bi";
 import Typewriter from "typewriter-effect";
 import GraphemeSplitter from "grapheme-splitter";
 import ThemeProvider from "../themes/ThemeProvider";
@@ -83,7 +84,7 @@ const Intro = () => {
               </h5>
 
               <div id="theme-options-wrapper">
-                {["light", "almond", "blue", "charcoal"].map((mode) => (
+                {["light", "blueberry", "gruvboxMaterial", "cyberpunk"].map((mode) => (
                   <button
                     key={mode}
                     data-mode={mode}
@@ -106,6 +107,28 @@ const Intro = () => {
                     </span>
                   ))}
               </p>
+
+              <div
+                className="resume-container"
+                style={{ justifyContent: "center", marginTop: "20px" }}
+              >
+                <a
+                  target="_blank"
+                  href={`${BASE_URL}files/Louis_Chen.pdf`}
+                  rel="noopener noreferrer"
+                  className="resume-btn"
+                >
+                  <BiDownload size={20} /> {t("about.expertise.resume_en")}
+                </a>
+                <a
+                  target="_blank"
+                  href={`${BASE_URL}files/Louis_Chen_C.pdf`}
+                  rel="noopener noreferrer"
+                  className="resume-btn"
+                >
+                  <BiDownload size={20} /> {t("about.expertise.resume_zh")}
+                </a>
+              </div>
             </div>
             <div className="right-column">
               <div id="preview-shadow">
