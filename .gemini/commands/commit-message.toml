@@ -1,0 +1,46 @@
+description = 'Generate a conventional commit message from staged git changes'
+
+prompt = '''
+
+Generate a commit message, listing & summarizing the main changes, based on the following git diff:
+
+```diff
+!{git diff --staged}
+```
+Requirements:
+
+- Follow Conventional Commits specification
+
+- Use appropriate types such as:
+  - feat
+  - fix
+  - refactor
+  - perf
+  - docs
+  - style
+  - test
+  - build
+  - ci
+  - chore
+  - revert
+  - security
+  - translations
+  - changeset
+
+Format:
+
+<type>(optional-scope): <short summary>
+
+Rules:
+
+- Use imperative mood (e.g. "add", "fix", "update")
+
+- Keep the summary under 72 characters
+
+- Do not end the summary with a period
+
+- Output only the commit message (no explanations, no markdown)
+
+- If needed, add a blank line followed by bullet points summarizing key changes
+
+'''
