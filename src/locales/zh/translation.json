@@ -52,8 +52,9 @@
         "items": [
           "架構並開發 Node.js 資料平台 (CDP) 服務，對接每月 30 萬筆紀錄，並利用快取機制與非同步處理優化查找效能，產出前端即用的結構化資料。",
           "優化學生平台效能與穩定性，支援 67 萬名用戶，透過 API 重構與 Load Balancing 策略，在高流量併發下顯著降低系統延遲。",
-          "主導 GCP 雲端基礎架構建置，從零配置 K8s、CI/CD 與防火牆；並推動由 VM 遷移至容器化環境（GKE/Cloud Run）以導入 Auto-scaling 與 Rolling Update，在維持零停機部署下節省約 30% 開銷。",
-          "建立自動化監控與故障排除體系，整合 GCP Error Reporting 與 Sentry 即時監控，將平均故障修復時間由數小時縮短至數分鐘。"
+          "主導 GCP 雲端基礎架構建置，透過 Terraform ​進行基礎設施管理（IaC）；建置專案 CI/CD 自動化流程，整合網路安全控制與 IAM 權限管理機制。",
+          "推動傳統 VM 遷移至容器化環境（GKE 與 Cloud Run），以啟用自動擴展（Autoscaling）與滾動更新 （Rolling Updates），在維持零停機部署下調降 30% 的營運開銷。",
+          "建立自動化監控與故障告警機制，整合 Prometheus、Grafana 與 Sentry，加速問題排除並將平均修復時間（MTTR）由數小時縮短至數分鐘。"
         ]
       },
       {

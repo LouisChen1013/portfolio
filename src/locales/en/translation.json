@@ -52,7 +52,8 @@
         "items": [
           "Architected a Node.js Customer Data Platform (CDP) processing 300k+ monthly records; optimized query performance via caching and asynchronous processing to deliver frontend-ready datasets.",
           "Enhanced student platform stability for 670k+ users by refactoring APIs and implementing load balancing strategies, significantly reducing latency under high-concurrency traffic.",
-          "Led GCP infrastructure setup (K8s, CI/CD, Firewall) and migrated VMs to GKE/Cloud Run to enable Auto-scaling and Rolling Updates, cutting costs by 30% while maintaining zero-downtime deployment.",
+          "Led GCP infrastructure setup using Terraform (IaC); implemented application CI/CD pipelines alongside network security controls and IAM.",
+          "Migrated legacy VMs to GKE​ and Cloud Run to enable autoscaling and rolling updates, cutting operational costs by 30% with zero-downtime deployments.",
           "Established an automated monitoring and incident response system using GCP Error Reporting and Sentry, accelerating troubleshooting and reducing recovery time from hours to minutes."
         ]
       },

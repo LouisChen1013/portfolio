@@ -12,8 +12,9 @@ import {
   BiSolidData,
   BiDownload,
   BiMessageDetail,
+  BiInfinite,
 } from "react-icons/bi";
-import { SiTerraform, SiGrafana, SiOpenai } from "react-icons/si";
+import { SiTerraform, SiGrafana } from "react-icons/si";
 import { Row, Col, Button, Form } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import emailjs from "emailjs-com";
@@ -105,8 +106,8 @@ const About = () => {
                   <span>Prometheus/Grafana</span>
                 </div>
                 <div className="skill-tag">
-                  <SiOpenai size={24} />{" "}
-                  <span>AI Agents</span>
+                  <BiInfinite size={24} />{" "}
+                  <span>CI/CD</span>
                 </div>
                 <div className="skill-tag">
                   <BiMessageDetail size={24} />{" "}
