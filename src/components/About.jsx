@@ -99,19 +99,19 @@ const About = () => {
                 </div>
                 <div className="skill-tag">
                   <SiTerraform size={24} />{" "}
-                  <span>Ansible/Terraform</span>
+                  <span>{t("about.skills.group3.0")}</span>
                 </div>
                 <div className="skill-tag">
                   <SiGrafana size={24} />{" "}
-                  <span>Prometheus/Grafana</span>
+                  <span>{t("about.skills.group3.1")}</span>
                 </div>
                 <div className="skill-tag">
                   <BiInfinite size={24} />{" "}
-                  <span>CI/CD</span>
+                  <span>{t("about.skills.group3.2")}</span>
                 </div>
                 <div className="skill-tag">
                   <BiMessageDetail size={24} />{" "}
-                  <span>Prompt Engineering</span>
+                  <span>{t("about.skills.group3.3")}</span>
                 </div>
               </div>
             </div>

@@ -25,7 +25,8 @@
     },
     "skills": {
       "group1": ["Python", "JavaScript", "Node.js", "React"],
-      "group2": ["GCP/AWS", "Docker/K8S", "SQL/NoSQL", "Git"]
+      "group2": ["GCP/AWS", "Docker/K8S", "SQL/NoSQL", "Git"],
+      "group3": ["Ansible/Terraform", "Prometheus/Grafana", "CI/CD", "Prompt Engineering"]
     },
     "contact": {
       "title": "Contact",
@@ -52,9 +53,9 @@
         "items": [
           "Architected a Node.js Customer Data Platform (CDP) processing 300k+ monthly records; optimized query performance via caching and asynchronous processing to deliver frontend-ready datasets.",
           "Enhanced student platform stability for 670k+ users by refactoring APIs and implementing load balancing strategies, significantly reducing latency under high-concurrency traffic.",
-          "Led GCP infrastructure setup using Terraform (IaC); implemented application CI/CD pipelines alongside network security controls and IAM.",
+          "Led GCP infrastructure provisioning using Terraform (IaC) and established CI/CD pipelines, IAM policies, and network security controls.",
           "Migrated legacy VMs to GKE​ and Cloud Run to enable autoscaling and rolling updates, cutting operational costs by 30% with zero-downtime deployments.",
-          "Established an automated monitoring and incident response system using GCP Error Reporting and Sentry, accelerating troubleshooting and reducing recovery time from hours to minutes."
+          "Built an automated observability and incident response system using Prometheus, Grafana, and Sentry, accelerating troubleshooting and reducing average recovery time (MTTR) from hours to minutes."
         ]
       },
       {
